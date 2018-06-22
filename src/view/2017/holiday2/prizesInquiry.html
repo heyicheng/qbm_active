@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>抽奖区</title>
+  <link rel="stylesheet" href="/statics/css/pages/2017/holiday2/prizesInquiry.css">
+  <link rel="stylesheet" href="/statics/css/common/reset.css">
+  <script src="/statics/js/plugins/adaptive.min.js"></script>
+  <script src="/statics/js/common/common.js"></script>
+</head>
+<body>
+  <div class="mark pos-abs hide"></div>
+  <div class="turntable-bg pos-rel box-shadow">
+    <em class="icon icon1 pos-abs"></em>
+    <em class="icon icon2 pos-abs"></em>
+    <em class="icon icon3 pos-abs"></em>
+    <em class="icon icon4 pos-abs"></em>
+    <div class="exchange"></div>
+    <div class="noStart"></div>
+    <!-- 礼盒 -->
+    <div class="gift hide">
+      <div class="gift-box">
+        <div class="gift-item gift-silver ">
+          <img class= "imgWidth2" src="/statics/img/pages/2017/holiday2/silver-close.png"/>
+          <div class="gift-name">白银礼盒</div>
+          <div class="gift-text gift-text1 btn-disabled" type="0">查看奖品</div>
+        </div>
+        <div class="gift-item gift-gold">
+          <img class= "imgWidth2" src="/statics/img/pages/2017/holiday2/gold-close.png"/>
+          <div class="gift-name">黄金礼盒</div>
+          <div class="gift-text gift-text2 btn-disabled" type="2">查看奖品</div>
+        </div>
+        <div class="gift-item gift-Diamonds ">
+          <img class= "imgWidth1" src="/statics/img/pages/2017/holiday2/diamonds-open.png"/>
+          <div class="gift-name">钻石礼盒</div>
+          <div class="gift-text gift-text3 btn-disabled" type="1">查看奖品</div>
+        </div>
+      </div>
+      <div class="arrow">
+        <div class="arrow1"></div>
+      </div>
+      <div class="gift-list">
+          <p>需要使用<span class="holiday-bi">10个假日币</span>开启礼盒，随机抽取以下奖品：</p>
+        <div class="gift-lists gift-lists1 hide">
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red2.png"/>
+            <div class="gift-name">2元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red5.png"/>
+            <div class="gift-name">5元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/lxx.png"/>
+            <div class="gift-name">小米旅行箱</div>
+          </div>
+        </div>
+
+        <div class="gift-lists gift-lists2 hide">
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red10.png"/>
+            <div class="gift-name">10元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red20.png"/>
+            <div class="gift-name">20元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/phc.png"/>
+            <div class="gift-name">小米平衡车</div>
+          </div>
+        </div>
+
+        <div class="gift-lists gift-lists3">
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red30.png"/>
+            <div class="gift-name">30元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red50.png"/>
+            <div class="gift-name">50元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/iphone.png"/>
+            <div class="gift-name">iPhone8</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- 获奖名单 -->
+  <div class="winning-list box-shadow">
+    <p class="listH1 text-center">已抽中奖品</p>
+    <p class="winner-list-title">
+      <span class="prize">奖品</span>
+      <span class="time">获奖时间</span>
+    </p>
+    <div class="swiper-container">
+      <div class="swiper-wrapper" id="winner-list">
+        <script id="winner-list-template" type="text/html">
+          {{each winnerList}}
+          <div class="swiper-slide">
+            <div class="winner-list-detail">
+              <span class="prize">{{$value.name}}</span>
+              <span class="time">{{$value.addtime}}</span>
+            </div>
+          </div>
+          {{/each}}
+        </script>
+      </div>
+    </div>
+
+  <script src="/statics/js/plugins/sea.js"></script>
+
+
+  <script src="/statics/js/plugins/seajs-css.js"></script>
+  <script src="/statics/js/common/sea-config.js"></script>
+  <script>
+    seajs.use("/statics/js/pages/2017/holiday2/prizesInquiry.js");
+  </script>
+</body>
+</html>

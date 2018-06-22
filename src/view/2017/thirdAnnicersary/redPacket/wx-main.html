@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" href="/statics/css/pages/2017/thirdAnnicersary/redPacket/wx.css">
+	<script src="/statics/js/plugins/adaptive.min.js"></script>
+	<script src="/statics/js/common/common.js"></script>
+	<title>谁领大红包</title>
+</head>
+<body class="pos-rel">
+	<img src="/statics/img/pages/2017/thirdAnnicersary/redPacket/more.png" class="pos-abs more" id="more">
+	<div class="wrap" id="pageData">
+		<script id="pageTpl" type="text/html">
+		<div class="bd">
+			<p class="text-center fc-white active-time">活动时间：11月1日—11月19日</p>
+			<ul class="ticket-list">
+				{{if code == -1 || code == 1 || code == 5 || code == 7}}
+				<li>
+					<span class="text-center used" id="redPacketUsed"></span>
+				</li>
+				{{else}}
+					{{if hongbao}}
+					<li>
+						<div class="fn-fl info">
+							<h2>{{hongbao.name}}</h2>
+							<p>有效期：{{hongbao.addtime}} - {{hongbao.vtime}}</p>
+							<p>登录钱保姆APP即可使用</p>
+						</div>
+						<div class="fn-fl text-center price">
+							<p class="num"><em>{{hongbao.money}}</em>元</p>
+							<p class="tip">{{if hongbao.status == 2}}新手已翻倍{{/if}}</p>
+						</div>
+					</li>
+					{{/if}}
+					{{if ticket}}
+					<li>
+						<div class="fn-fl info">
+							<h2>{{ticket.name}}</h2>
+							<p>有效期：{{ticket.addtime}} - {{ticket.vtime}}</p>
+							<p>登录钱保姆APP即可使用</p>
+						</div>
+						<div class="fn-fl text-center price">
+							<p class="num"><em>{{ticket.money}}</em>元</p>
+						</div>
+					</li>
+					{{/if}}
+				{{/if}}
+			</ul>
+			<p class="text-center account hide">红包已放入账号：<span>{{phone}}</span></p>			
+			<div class="text-center hide" id="useBtnBox"><span class="useBtn" id="useBtn">立&nbsp;即&nbsp;使&nbsp;用</span></div>
+		</div>
+		<div class="mt20 fc-white bd">
+			<div class="text-center"><img src="/statics/img/pages/2017/thirdAnnicersary/redPacket/listTop.png" class="listTop"></div>
+			<ul class="redPacket-list">
+				{{each dataList}}
+				<li>
+					<img src="{{$value.face}}" class="fn-fl avatar">
+					<div class="fn-fr main">
+						<dl class="fn-fl user">
+							<dt>{{$value.nickname}}</dt>
+							<dd>{{$value.receive_time}}</dd>
+						</dl>
+						<dl class="fn-fr money">
+							<dt>{{$value.realMoney}}元</dt>
+							<dd>
+								{{if $value.typeLimit==1}}<span class="big">最大红包</span>{{/if}}
+								{{if $value.typeLimit==2}}<span class="best">最佳手气</span>{{/if}}
+							</dd>
+						</dl>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+			
+			<p class="text-center hide moreRedPacket">我们的红包未完待续···</p>
+
+			<div class="text-center"><img src="/statics/img/pages/2017/thirdAnnicersary/redPacket/ruleTop.png" class="ruleTop"></div>
+			<div class="rule">
+				<p>1.首次分享钱保姆3周年活动页面、完成投资（单笔不少于5000元）即可分享红包；</p>
+				<p>2.每个红包分享链接按领取顺序随机发放1个红包和38元理财生活券；</p>
+				<p>3.每个红包分享链接仅限20人领取，每人每天仅限领取3个红包；</p>
+				<p>4.首次领取红包时需输入手机号，红包自动发放到钱保姆账户，登录后即可使用，新用户请先完成注册，额外可领取888元新手红包；</p>
+				<p>5. 红包和理财生活券在领取后即可入账，可在我的券包中查看，红包使用有效期为15天，理财生活券使用有效期为7天；</p>
+				<p>6.如有疑问，详询客服400-006-7066；</p>
+				<p>7.钱保姆保留对本次活动在法律允许范围内的解释。</p>
+			</div>
+		</div>
+		</script>
+	</div>
+	
+	<script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="/statics/js/plugins/sea.js"></script>
+	<script src="/statics/js/plugins/seajs-css.js"></script>
+	<script src="/statics/js/common/sea-config.js"></script>
+	<script>
+		seajs.use("/statics/js/pages/2017/thirdAnnicersary/redPacket/wx-main.js");
+	</script>
+</body>
+</html>

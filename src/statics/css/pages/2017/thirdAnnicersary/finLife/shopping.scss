@@ -1,0 +1,188 @@
+@import "../../../../common/reset.scss";
+body{
+	background: -webkit-linear-gradient(top left, #6641cc, #000327);
+	background: linear-gradient(top left, #6641cc, #000327);
+	font-size: 14px;
+	margin: 0;
+}
+
+.container {
+	position: relative;
+	top: 0;
+	left: 0;
+	max-width: 7.5rem;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/shoppingBg.png) 100% no-repeat;
+	background-position: top;
+	background-size: 100% 8.74rem;
+	.top {
+		width: 100%;
+		height: 4.65rem;
+		text-align: center;
+		img {
+			display: inline-block;
+			height: 100%;
+		}
+	}
+	.rulesBtn {
+		position: absolute;
+		right: 0;
+		top: 1.5rem;
+		z-index: 99;
+		width: 0.96rem;
+		height: 0.86rem;
+		background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/rulesBtn.png) 100% no-repeat;
+		background-size: 100% 100%;
+	}
+}
+.tabBox {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 0.7rem;
+	margin-top: -0.5rem;
+	margin-bottom: 0.25rem;
+	.tab {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		width: 1.0rem;
+		height: 1.2rem;
+		p {
+			width: 100%;
+			text-align: center;
+			color: #7e73b9;
+		}
+		img {
+			position: absolute;
+			bottom: -0.25rem;
+			left: 50%;
+			width: 0.4rem;
+			margin-left: -0.2rem;
+			display: none;
+		}
+		&:nth-child(1){
+			display: none;
+			background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/tab1.png) 100% no-repeat;
+			background-position: top;
+			background-size: 100% 0.77rem;
+		}
+
+		&:nth-child(1).active{
+			display: none;
+			background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/tab1_hover.png) 100% no-repeat;
+			background-position: top;
+			background-size: 100% 0.77rem;
+		}
+		&:nth-child(2){
+			background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/tab2.png) 100% no-repeat;
+			background-position: top;
+			background-size: 100% 0.77rem;
+		}
+
+		&:nth-child(2).active{
+			background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/tab2_hover.png) 100% no-repeat;
+			background-position: top;
+			background-size: 100% 0.77rem;
+		}
+		&:nth-child(3){
+			background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/tab3.png) 100% no-repeat;
+			background-position: top;
+			background-size: 100% 0.77rem;
+		}
+
+		&:nth-child(3).active{
+			background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/tab3_hover.png) 100% no-repeat;
+			background-position: top;
+			background-size: 100% 0.77rem;
+		}
+		&:nth-child(4){
+			background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/tab4.png) 100% no-repeat;
+			background-position: top;
+			background-size: 100% 0.77rem;
+		}
+
+		&:nth-child(4).active{
+			background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/tab4_hover.png) 100% no-repeat;
+			background-position: top;
+			background-size: 100% 0.77rem;
+		}
+	}
+	.active {
+		p {
+			color: #fff;
+			background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/textBg.png) 100% no-repeat;
+			background-position: bottom;
+			background-size: 100% 0.1rem;
+		}
+		img {
+			display: block;
+		}
+	}
+}
+.goodsBox {
+	position: relative;
+	width: 6.9rem;
+	height: 6.68rem;
+	margin: 0 auto;
+	padding: 0 0.25rem 0.25rem 0.25rem;
+	border-radius: 0.28rem 0.28rem 0 0;
+	background: #8e87b5;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling : touch;
+	&::-webkit-scrollbar {
+		display:none;
+	}
+	.goods {
+		width: 6.4rem;
+		height: 2.2rem;
+		border-radius: 0.18rem;
+		background: #fff;
+		padding-top: 0.25rem;
+		padding-left: 0.3rem;
+		margin-top: 0.25rem;
+		&:last-child {
+			margin-bottom: 0.4rem;
+		}
+		._imgbox {
+			float: left;
+			width: 1.7rem;
+			height: 1.7rem;
+			margin-right: 0.3rem;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		._textbox {
+			float: left;
+			width: 3.8rem;
+			p {
+				width: 100%;
+				overflow: hidden;
+				text-overflow:ellipsis;
+				white-space: nowrap;
+				font-size: 0.3rem;
+				color: #313131;
+				line-height: 0.4rem;
+			}
+			s {
+				display: inline-block;
+				font-size: 0.28rem;
+				color: #999;
+				margin: 0.06rem 0;
+			}
+			button {
+				width: 3.8rem;
+				height: 0.8rem;
+				background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/btnBg.png) no-repeat;
+				background-size: 100% 100%;
+				border: none;
+				font-size: 0.36rem;
+				color: #954fe6;
+			}
+		}
+	}
+}

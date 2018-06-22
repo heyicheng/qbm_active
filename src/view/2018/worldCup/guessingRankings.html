@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" href="/statics/css/common/reset.css">
+	<link rel="stylesheet" href="/statics/css/pages/2018/worldCup/guessingRankings.css">
+	<script src="/statics/js/plugins/adaptive.min.js"></script>
+	<script src="/statics/js/common/common.js"></script>
+	<title>竞猜排行榜</title>
+</head>
+
+<body>
+  <div class="container clearfix">
+    <div class="pos-rel list-box">
+      <span class="pos-abs title"></span>
+      <div class="bd" id="dataList">
+        <script id="dataListTpl" type="text/html">
+        <div class="text-center data-time">数据截至{{dateFormatFun systemTime 5}}</div>
+        <ul class="list clearfix">
+          <li class="head">
+            <span class="fn-fl no">排名</span>
+            <span class="fn-fl text-center name">钱粉</span>
+            <span class="fn-fl text-center phone">手机号</span>
+            <span class="fn-fr coin">竞猜币</span>
+          </li>
+          {{each dataList}}
+          <li class="{{lineFun $index}}">
+            <span class="fn-fl no {{iconFun $index}}">&nbsp;</span>
+            <span class="fn-fl text-center name">{{showNameFun $value.name $index}}</span>
+            <span class="fn-fl text-center phone">{{$value.phone}}</span>
+            <span class="fn-fr coin">{{$value.beansCount}}</span>
+          </li>
+          {{/each}}
+        </ul>
+        </script>
+      </div>
+    </div>
+  </div>
+	<script src="/statics/js/plugins/sea.js"></script>
+	<script src="/statics/js/plugins/seajs-css.js"></script>
+	<script src="/statics/js/common/sea-config.js"></script>
+	<script>
+		seajs.use("/statics/js/pages/2018/worldCup/guessingRankings.js");
+	</script>
+</body>
+
+</html>

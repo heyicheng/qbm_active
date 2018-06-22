@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" href="/statics/css/common/reset.css">
+	<link rel="stylesheet" href="/statics/css/pages/2018/worldCup/guessRecord.css">
+	<script src="/statics/js/plugins/adaptive.min.js"></script>
+	<script src="/statics/js/common/common.js"></script>
+	<title>竞猜记录</title>
+</head>
+
+<body>
+  <div class="container clearfix">
+    <div class="pos-rel list-box">
+      <span class="pos-abs title"></span>
+      <div class="bd">
+        <div class="tab">
+          <span class="fn-fl nav selected" data-type="all"><em>全部</em></span>
+          <span class="fn-fl nav wait" data-type="wait"><em>待开奖</em></span>
+          <span class="fn-fr nav" data-type="win"><em>中奖记录</em></span>
+        </div>
+        <ul class="list clearfix" id="dataList">
+          <script id="dataListTpl" type="text/html">
+          {{each dataList}}
+          <li>
+            <dl class="fn-fl item1">
+              <dt>{{dateFormatFun $value.addtime 1}}</dt>
+              <dd>
+								{{if $value.account}}
+								出借{{$value.name}}
+								{{else}}
+								{{$value.name}}
+								{{/if}}
+							</dd>
+            </dl>
+						<dl class="fn-fl item2">
+							<dt>{{if !$value.account}}投<em>5</em>枚{{/if}}</dt>
+							<dd>
+								{{if $value.account}}
+								<em>{{$value.account}}</em>元
+								{{else}}
+								押<em>【{{$value.winTeam}}{{if $value.winTeam != "平"}}胜{{/if}}】</em>
+								{{/if}}
+							</dd>
+						</dl>
+						<dl class="fn-fr item3">
+							<dt>
+								{{if $value.account}}
+								&nbsp;
+								{{else}}
+									{{if $value.result == 0}}待开奖{{/if}}
+									{{if $value.result == 1}}中奖{{/if}}
+									{{if $value.result == 2}}未中奖{{/if}}
+								{{/if}}
+							</dt>
+							<dd>
+								{{if $value.account}}
+								<em>+{{$value.points}}</em>枚
+								{{/if}}
+								{{if $value.result ==1}}
+								<em>+10</em>枚
+								{{/if}}
+							</dd>
+						</dl>
+          </li>
+          {{/each}}
+          </script>
+        </ul>
+      </div>
+    </div>
+  </div>
+	<script src="/statics/js/plugins/sea.js"></script>
+	<script src="/statics/js/plugins/seajs-css.js"></script>
+	<script src="/statics/js/common/sea-config.js"></script>
+	<script>
+		seajs.use("/statics/js/pages/2018/worldCup/guessRecord.js");
+	</script>
+</body>
+
+</html>

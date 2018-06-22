@@ -1,0 +1,367 @@
+
+@import "../../../../common/reset.scss";
+
+body{
+  max-width: 7.5rem;
+  font-size: 14px;
+  margin: 0 auto !important;
+  background: url("/statics/img/pages/2017/thirdAnnicersary/redPacket/wx-banner.png") #8131cd no-repeat;
+  background-size: 7.5rem 12.86rem;
+}
+body * {
+    max-width: 7.5rem;
+}
+
+.fc-white{
+	color: #fff;
+}
+
+.mt20{
+	margin-top: .2rem;
+}
+
+.blockImg{
+  width: 100%;
+  height: auto;
+}
+
+.hide{
+	display: none !important;
+}
+
+.more{
+	top: 2.80rem;
+	right: 0;
+	width: 2rem;
+	height: 1.32rem;
+}
+
+.wrap{
+  padding: 6.56rem .2rem .9rem .2rem;
+  .bd{
+    padding: 0 .2rem .2rem .2rem;
+    background: rgba(149,82,213,0.76);
+    border-radius: .16rem;
+
+    .active-time{
+    	height: .72rem;
+    	line-height: .72rem;
+    	font-size: 16px;
+    }
+    .login-bd{
+		padding: 0 .42rem;
+		.login-phone{
+			height: .88rem;
+			line-height: .88rem;
+			width: 5.06rem;
+			padding: 0 .4rem;
+			border:0;
+			border-radius: .4rem;
+			background-color: #fff;
+		}
+		.login-btn{
+			height: .88rem;
+			line-height: .88rem;
+			width: 100%;
+			border:0;
+			border-radius: .4rem;
+			background-color: #ffc000;
+			color: #522d1d;
+			margin-top: .4rem;
+			font-size: 16px;
+		}
+		.login-tip{
+			padding-top: .26rem;
+		}
+    }
+	.ticket-list{
+		li{
+			height: 2.2rem;
+			background: url("/statics/img/pages/2017/thirdAnnicersary/redPacket/ticketBg.png") no-repeat;
+  			background-size: 100% 2.2rem; 
+  			margin-bottom: .2rem;
+  			.info{
+  				padding: .46rem 0 0 .5rem;
+				width: 4.56rem;
+				h2{
+					font-weight: normal;
+					font-size: 18px;
+				}
+				p{
+					padding-top: .12rem;
+					color: #999;
+					font-size: 12px;
+				}
+  			}
+			.price{
+				width: 2.10rem;
+				padding-top: .72rem;
+				p{
+					color: #ae58ff;
+				}
+				p.num{
+					font-size: 18px;
+					em{
+						font-size: 30px;
+						font-weight: bold;
+					}
+				}
+			}
+  			.used{
+  				display: block;
+  				margin: 0 .4rem;
+  				height: 2.2rem;
+  				line-height: 2.2rem;
+  				color: #313131;
+  				background-color: #fff;
+  				font-size: 20px;
+  			}
+		}
+	}
+	.account{
+		height: .6rem;
+		line-height: .6rem;
+		color: #e4c8ff;
+	}
+	.useBtn{
+		display: inline-block;
+    	width: 5.16rem;
+    	height: .9rem;
+    	line-height: .9rem;
+    	background-color: #ffc000;
+    	color: #522d1d;
+    	font-size: 16px;
+    	border-radius: .45rem;
+    	margin-bottom: .4rem;
+	}
+	.disUse{
+		background-color: #b3b3b3;
+		color: #313131;
+		margin: .94rem 0 .66rem 0;
+	}
+    .reg-bd{
+	  padding: 0 .4rem .5rem .4rem;
+	  .form-item{
+	      position: relative;
+	      height: 1.28rem;
+	      .form-control{
+	        height: .88rem;
+	        background-color: #fff;
+	        -webkit-border-radius: 0.55rem;
+	        -moz-border-radius: 0.55rem;
+	        border-radius: 0.55rem;
+	        border:none;
+	        width: 5.86rem;
+	      }
+	      input.form-control{
+	        padding: 0 .44rem;
+	        width: 5.88rem;
+	        border: none;
+	        outline: none;
+	        box-sizing: border-box;
+	      }
+	      .fn-fl{
+	        float: left;
+	        display: inline;
+	        width: 3.84rem !important;
+	      }
+	      .fn-fr{
+	        float: right;
+	        display: inline;
+	        width: 1.86rem !important;
+	        line-height: .88rem;
+	        img{
+	          vertical-align: middle;
+	          width: 1.2rem !important;
+	          height: auto;
+	        }
+	      }
+	      input.fn-fr{
+	        padding: 0;
+	      }
+	      .verificationCode{
+	        height: .94rem !important;
+	        color: #000;
+	      }
+	      .verificationCode:disabled{
+	        background-color: #b0b0b0;
+	        opacity:1;
+	        -webkit-opacity:1;
+	      }
+	    }
+	    .form-item:last-child{
+	      height: 1.08rem !important;
+	    }
+	    .reg-agreement a{
+	      border-bottom: 1px solid #fff;
+	      color:#fff;
+	    }
+	    .reg-agreement span{
+	    	color:#fff;
+	    	em{
+	    		border-bottom: 1px solid #fff;
+	    	}
+	    }
+	    .regBtn{
+	    	border: 0;
+	    	width: 100%;
+	    	height: .88rem;
+	    	line-height: .88rem;
+	    	background-color: #ffc000;
+	    	color: #522d1d;
+	    	font-size: 16px;
+	    	margin-top: .2rem;
+	    	border-radius: .40rem;
+	    }
+	}
+
+	.listTop{
+		width: 6.5rem;
+		height: .52rem;
+		margin-top: .36rem;
+	}
+	.redPacket-list{
+		padding-top: .5rem;
+		li{
+			height: .94rem;
+			margin-bottom: .3rem;
+			.avatar{
+				height: .94rem;
+				width: .94rem;
+				border-radius: .94rem;
+			}
+			.main{
+				width: 5.52rem;
+				font-size: 16px;
+				dd{
+					padding-top: .1rem;
+				}
+				.money{
+					text-align: right;
+					dt{
+						font-weight: bold;
+					}
+				}
+				.best{
+					display: inline-block;
+					height: .3rem;
+					line-height: .3rem;
+					background: url("/statics/img/pages/2017/thirdAnnicersary/redPacket/bestIcon.png") no-repeat;
+  					background-size: .32rem .23rem;
+  					padding-left: .36rem;
+				}
+
+				.big{
+					display: inline-block;
+					height: .3rem;
+					line-height: .3rem;
+					background: url("/statics/img/pages/2017/thirdAnnicersary/redPacket/redPackIcon.png") no-repeat;
+  					background-size: .22rem .26rem;
+  					padding-left: .28rem;
+				}
+
+			}
+		}
+	}
+	.ruleTop{
+		width: 6.46rem;
+		height: .64rem;
+		margin-top: .36rem;
+	}
+    .rule{
+    	padding: .16rem .1rem;
+    	overflow: hidden;
+    }
+    
+  }
+}
+
+
+.layui-m-layermain{
+  .layer-tip{
+    background: rgba(0,0,0,.6);
+    font-size: .26rem;
+    width: 5.8rem!important;
+    height: 7.2rem!important;
+    color: #333;
+    border-radius: .08rem;
+    .layui-m-layercont{
+      padding: .2rem 0;
+    }
+    .layermcont{
+      height: .8rem!important;
+      line-height: .8rem!important;
+    }
+    .tip-box{
+      width: 5.8rem;
+      height: 7.2rem;
+      background-color: #fff;
+      border-radius: .08rem;
+      color: #333;
+      .tip-close{
+        height: .52rem;
+        width: .52rem;
+        background: url("/statics/img/pages/2017/market/reg/reg-close.png") no-repeat;
+        background-size: .52rem;
+        right: -0.2rem;
+        top: -0.2rem;
+      }
+      h1{
+        font-weight: normal;
+        font-size: .40rem;
+        padding-top: .50rem;
+        height: .88rem;
+      }
+      .bd{
+        img{
+          width: 3.28rem;
+          height: 3.06rem;
+        }
+        p{
+          font-size: .3rem;
+          padding-top: .10rem;
+          line-height: 0.5rem!important;
+          height: 0.5rem!important;
+          span{
+            color: #ff6900;
+          }
+        }
+      }
+      .tip-down-btn{
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1.18rem;
+        line-height: 1.18rem;
+        background-color: #768bf8;
+        font-size: .38rem;
+        -webkit-border-bottom-right-radius: .08rem;
+        -webkit-border-bottom-left-radius: .08rem;
+        border-bottom-right-radius: .08rem;
+        border-bottom-left-radius: .08rem;
+      }
+
+    }
+  }
+  .layer-tip-error{
+    background: rgba(0,0,0,.6);
+    font-size: .26rem;
+    width: 5.8rem;
+    height: .8rem;
+    color: #fff;
+    border-radius: .08rem;
+    .layermcont{
+      height: .8rem;
+      line-height: .8rem;
+    }
+  }
+}
+
+.laymshade{
+  background-color: rgba(0,0,0,.4);
+}
+
+.layer-tip{
+	background: rgba(0,0,0,0.7);
+	color: #fff !important;
+}

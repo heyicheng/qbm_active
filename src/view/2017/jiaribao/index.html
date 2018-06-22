@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>假日宝</title>
+  <link rel="stylesheet" href="/statics/css/pages/2017/jiaribao/index.css">
+  <script src="/statics/js/plugins/adaptive.min.js"></script>
+  <script src="/statics/js/common/common.js"></script>
+</head>
+<body>
+  <div class="pos-rel banner">
+    <img src="/statics/img/pages/2017/jiaribao/banner/20180608.png" class="imgBlock" />
+    <span class="pos-abs rule" id="rule">活动规则&gt;</span>
+  </div>
+
+  <div class="box">
+    <img src="/statics/img/pages/2017/jiaribao/intro/intro20180608.png" class="imgBlock" />
+  </div>
+  
+  <div id="main">
+    <script id="mainTpl" type="text/html">
+      <div class="box main">        
+        <div class="text-center title">
+          <img src="/statics/img/pages/2017/jiaribao/title.png" />
+        </div>
+        <div class="convertible-box">
+          <div class="convertible clearfix">
+            <div class="fn-fl title">当前可兑换出借额：</div>
+            <div class="fn-fr amount"><span>{{exchangeMoney}}</span>元</div>
+          </div>
+          <p>活动期间，当您的可兑换出借额满足以下条件，就能直接领取相应奖品。</p>
+        </div>
+        <ul class="prize-list">
+          {{each dataList}}
+          <li>
+            <div class="fn-fl text-center thumb">
+              <img src="/statics/img/pages/2017/jiaribao/{{$value.amount}}.png" class="jiaribao">
+              <p>{{$value.amount}}元红包</p>
+            </div>
+            <p class="fn-fl intro">累计出借满<span>{{$value.exchangePrice}}</span>元领取</p>
+            <span class="fn-fr text-center btn {{if $value.exchangeStatus == 1}}active{{/if}}" data-level="{{$value.level}}" data-amount="{{$value.amount}}">领取奖品</span>
+          </li>
+          {{/each}}
+        </ul>        
+      </div>
+    </script>
+  </div>
+
+  <div class="borrow-list">
+    <div class="borrowList" id="borrowList" >
+      <div class="nonTip"></div>
+      <script id="borrow-list-template" type="text/html">
+        {{each datalist}}
+        <div class="borrowDetail">
+          <h1><span class="big1 fn-fl" data-financingId="{{$value.id}}" data-isDetailNew="{{$value.is_new_detail}}">{{$value.name}}</span><span class="big2 fn-fl">{{startB $value.valid_date}}</span></h1>
+          <p class="rate">
+            <span class="big1 fn-fl">{{$value.basic_apr}}<span class="small">%+{{$value.reward_apr}}%</span></span>
+            <span class="big2 fn-fl">{{timeLimitFun1 $value.status $value.isday $value.timeLimitDay $value.timeLimit}}</span>
+          </p>
+          <p class="intro">
+            <span class="year">预期年化</span>
+            <span class="time">出借期限</span>
+          </p>
+          <p class="process pos-rel">
+            <span class="pro-start pos-abs {{imgFun $value.scales}}"></span>
+            <span class="pro-line pos-abs"><span class="bg-span " style="width:{{scaleWidth $value.scales}}%"></span></span>
+            <span class="pro-end pos-abs"></span>
+            <span class="process-num pos-abs">{{scaleWidth $value.scales}}%</span>
+          </p>
+        </div>
+        {{/each}}
+      </script>
+    </div>
+  </div>
+ 
+  <div class="mt20 package">
+    <div class="fn-fl intro">获得的奖品请前往我的券包查询</div>
+    <div class="fn-fr btn" id="ticketPackage"><span>立即前往></span></div>
+  </div>
+
+  <p class="text-center copyRight">*钱保姆保留对本次活动在法律允许范围内的解释权</p>
+  
+  <input type="hidden" value="" id="systemTime">
+
+  <script src="/statics/js/plugins/sea.js"></script>
+  <script src="/statics/js/plugins/seajs-css.js"></script>
+  <script src="/statics/js/common/sea-config.js"></script>
+  <script>
+    seajs.use("/statics/js/pages/2017/jiaribao/index.js");
+  </script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+@import "../../../common/reset.scss";
+body {
+	background: #0f0d34;
+	font-size: 14px;
+	margin: 0;
+}
+.container {
+	position: relative;
+	max-width: 7.5rem;
+	width: 100%;
+	min-height: 15.4rem;
+	background: url(/statics/img/pages/2017/1212/pageBg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+}
+.logo {
+	position: absolute;
+	left: 0.2rem;
+	top: 0;
+	width: 1.02rem;
+}
+
+.lotteryBox {
+	position: relative;
+	top: 6.36rem;
+	left: 0;
+	width: 7.30rem;
+	height: 6.31rem;
+	margin: 0 auto;
+	padding: 0.20rem;
+	padding-top: 1.08rem;
+	background: url(/statics/img/pages/2017/1212/lotteryBg.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+	.myDou {
+		position: absolute;
+		top: 0.22rem;
+		left: 50%;
+		margin-left: -3.16rem;
+		width: 6.32rem;
+		height: 0.5rem;
+		p {
+			padding-left: 1.5rem;
+			line-height: 0.5rem;
+			text-align: center;
+			color: #ff6900;
+			font-size: 0.4rem;
+		}
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		li {
+			position: relative;
+			width: 1.68rem;
+			height: 1.4rem;
+			border-radius: 0.16rem;
+			margin: 0.06rem 0;
+			overflow: hidden;
+			background: url(/statics/img/pages/2017/1212/prizeBg.png) #fff no-repeat;
+			background-size: 1.6rem 0.4rem;
+			background-position: bottom center;
+			color: #fff;
+			font-size: 0.2rem;
+			.curPrize {
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1.7rem!important;
+				height: 1.4rem!important;
+			}
+			span {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 0.3rem;
+				line-height: 0.3rem;
+				text-align: center;
+				i {
+					font-size: 0.14rem;
+				}
+			}
+			&:nth-child(1) {
+				img {
+					width: 0.54rem;
+				}
+			}
+			&:nth-child(2) {
+				img {
+					width: 0.8rem;
+				}
+			}
+			&:nth-child(3) {
+				img {
+					width: 0.98rem;
+				}
+			}
+			&:nth-child(4) {
+				img {
+					width: 0.50rem;
+				}
+			}
+			&:nth-child(5) {
+				img {
+					width: 0.53rem;
+				}
+			}
+			&:nth-child(7) {
+				img {
+					width: 0.52rem;
+				}
+			}
+			&:nth-child(8) {
+				img {
+					width: 0.5rem;
+				}
+			}
+			&:nth-child(9) {
+				img {
+					width: 0.98rem;
+				}
+			}
+			&:nth-child(10) {
+				img {
+					width: 0.70rem;
+				}
+			}
+			&:nth-child(11) {
+				img {
+					width: 1.27rem;
+				}
+			}
+			p {
+				width: 100%;
+				height: 1.08rem;
+				text-align: center;
+				line-height: 1.08rem;
+				background: #fff;
+			}
+		}
+	}
+	.lotteryBtn {
+		width: 3.44rem;
+		background-color: #5645fc;
+		background-image: url(/statics/img/pages/2017/1212/lotteryBtn.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+	}
+	.nostart {
+		background-image: url(/statics/img/pages/2017/1212/noStart.png)!important;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+	}
+	.end {
+		width: 3.44rem;
+		background-image: url(/statics/img/pages/2017/1212/end.png)!important;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+	}
+	.active {
+		.curPrize {
+			display: inline-block;
+		}
+	}
+}
+
+
+.btnBox {
+	position: relative;
+	top: 6.36rem;
+	left: 0;
+	width: 7.30rem;
+	height: 1.16rem;
+	margin: 0 auto;
+	margin-top: 0.3rem;
+	background: url(/statics/img/pages/2017/1212/myPrize.png) no-repeat;
+	background-size: 100% 100%;
+	button {
+		width: 36.8rem;
+		height: 0.84rem;
+		border: none;
+		font-size: 0.3rem;
+		color: #fff;
+		&:first-child {
+			margin-right: 0.28rem;
+		}
+	}
+}
+
+.successPop {
+	width: 5.4rem!important;
+	.layui-m-layercont {
+		padding: 0 0.6rem;
+		.title {
+			margin-top: 1rem;
+			color: #ff4384;
+			font-size: 0.48rem;
+		}
+		.icon {
+			position: absolute;
+			top: -0.66rem;
+			left: 50%;
+			width: 2.28rem;
+			height: 1.52rem;
+			margin-left: -1.14rem;
+		}
+		p {
+			color: #313131;
+			font-size: 0.28rem!important;
+			margin: 0.3rem 0;
+		}
+		._imgBox {
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.layui-m-layerbtn {
+		height: 1.08rem;
+		margin-top: 0.54rem;
+		margin-bottom: 0.2rem;
+		background: none;
+		border: none;
+		span[yes] {
+			display: block;
+			width: 3.06rem!important;
+			height: 1.08rem!important;
+			margin: 0 auto;
+			background: url(/statics/img/pages/2017/1212/btnBg.png);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: top;
+			color: #fff;
+			font-size: 0.3rem;
+			line-height: 0.84rem;
+		}
+	}
+}
+.fail {
+	.layui-m-layercont {
+		.icon {
+			width: 1.52rem;
+			margin-left: -0.76rem;
+		}
+		.title {
+			margin-top: 1rem;
+			color: #313131;
+			font-size: 0.42rem;
+		}
+	}
+}
+
+.finBox {
+	border-bottom: 1px solid #e5e5e5;
+	.item {
+		height: 0.8rem;
+		margin: 0.3rem 0;
+		font-size: 0.28rem;
+		line-height: 0.8rem;
+		input[type='number'] {
+			box-sizing: border-box;
+			width: 3.26rem;
+			height: 0.8rem;
+			border: 0.04rem solid #e5e5e5;
+			border-radius: 0.8rem;
+			margin: 0 0.1rem;
+			padding: 0 0.3rem;
+			outline: none;
+			background: none;
+		}
+		&:nth-child(2) {
+			input[type='radio'] {
+				display: inline-block;
+				margin: 0 0.3rem;
+			}
+		}
+	}
+}
+
+.content {
+	width: 100%;
+	min-height: 100vh;
+	padding: 0.3rem 0.4rem;
+	font-size: 0.24rem;
+	.box {
+		width: 6.68rem;
+		min-height: 7.94rem;
+		border-radius: 0.1rem;
+		padding: 0.3rem 0.2rem;
+		margin: 0 auto;
+		background: #fff;
+		p {
+			width: 100%;
+			margin: 0;
+			margin-bottom: 0.4rem;
+			color: #333;
+			&:last-child {
+				margin: 0;
+			}
+		}
+		.item {
+			overflow: hidden;
+			padding: 0.3rem 0.2rem;
+			margin: 0 0.1rem;
+			border-bottom: 1px solid #000;
+			font-size: 0.24rem;
+			span:nth-child(1) {
+				float: left;
+				i {
+					color: #999;
+				}
+			}
+			span:nth-child(2) {
+				float: right;
+				i {
+					color: #999;
+				}
+			}
+		}
+	}
+	.tip {
+		position: absolute;
+		bottom: 0.3rem;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		color: #a397d8;
+	}
+}

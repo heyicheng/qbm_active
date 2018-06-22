@@ -1,0 +1,176 @@
+
+@import "../../../common/reset.scss";
+
+body{
+  max-width: 7.5rem;
+  font-size: 14px;
+  margin: 0 auto !important;
+  background-color:#4c05a8;
+}
+body * {
+    max-width: 7.5rem;
+}
+
+
+.blockImg{
+  width: 100%;
+  height: auto;
+}
+
+.main{
+  background: url("/statics/img/pages/2017/thirdAnnicersary/index/bg1.png") no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 17.23rem;
+  .goBtn{
+    width: .9rem;
+    height: .58rem;
+    z-index: 200;
+  }
+  .jiaxi-box{
+    top: 0;
+    left: 0;
+    right: 0;
+    background: url("/statics/img/pages/2017/thirdAnnicersary/index/1.png") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 3.5rem;
+    .goBtn{
+      top: 2.5rem;
+      right: 1.2rem;
+    }
+  }
+  .redpacket-box{
+    top: 3.3rem;
+    left: 0;
+    right: 0;
+    background: url("/statics/img/pages/2017/thirdAnnicersary/index/2.png") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 3.58rem;
+    .goBtn{
+      top: 2.66rem;
+      left: 1rem;
+    }
+  }
+  .qianggou-box{
+    top: 7.0rem;
+    left: 0;
+    right: 0;
+    background: url("/statics/img/pages/2017/thirdAnnicersary/index/3.png") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 3.42rem;
+    .goBtn{
+      top: 1.8rem;
+      right: .84rem;      
+    }
+  }
+  .finLife-box{
+    top: 10rem;
+    left: 0;
+    right: 0;
+    background: url("/statics/img/pages/2017/thirdAnnicersary/index/4.png") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 3.86rem;
+    .goBtn{
+      top: 2.5rem;
+      left: .86rem;
+    }
+  }
+  .jiqiandou-box{
+    top: 13.2rem;
+    left: 0;
+    right: 0;
+    background: url("/statics/img/pages/2017/thirdAnnicersary/index/5.png") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 3.88rem;
+    .receiveBtn{
+      top: 2.32rem;
+      right: .86rem;
+      width: 3.1rem;
+      height: .62rem;
+    }
+  }
+
+}
+
+.footer{
+  background: url("/statics/img/pages/2017/thirdAnnicersary/index/bg2.png") no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 8.64rem;
+  .box{
+    width: 6.94rem;
+    height: 5.44rem;
+    margin: 0 auto;
+    .box-bg{
+      background: url("/statics/img/pages/2017/thirdAnnicersary/index/box.png") no-repeat;
+      background-size: 100% 100%;
+      padding: 1.02rem .2rem .4rem .2rem;
+      width: 6.94rem;
+      height: 5.4rem;
+    }
+  }
+  .footer-btn{
+    margin-top: .44rem;
+    width: 6.78rem;
+    height: .9rem;
+  }
+}
+
+.share{
+  position: fixed;
+  top: 5.3rem;
+  right: .05rem;
+  width: 1.32rem;
+  height: 1.36rem;
+  z-index: 999;
+}
+.shareBtn{
+  background: url("/statics/img/pages/2017/thirdAnnicersary/index/shareBtn.png") no-repeat;
+  background-size: 100% 100%;
+}
+.qiandouBtn{
+  background: url("/statics/img/pages/2017/thirdAnnicersary/index/qiandouBtn.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.layui-m-layermain{
+  .layer-tip{
+    background: rgba(0,0,0,.6);
+    font-size: .26rem;
+    width: 5.8rem!important;
+    height: 7.2rem!important;
+    color: #333;
+    border-radius: .08rem;
+    .layui-m-layercont{
+      padding: .2rem 0;
+    }
+    .layermcont{
+      height: .8rem!important;
+      line-height: .8rem!important;
+    }
+  }
+  .layer-tip-error{
+    background: rgba(0,0,0,.6);
+    font-size: .26rem;
+    width: 5.8rem;
+    height: .8rem;
+    color: #fff;
+    border-radius: .08rem;
+    .layermcont{
+      height: .8rem;
+      line-height: .8rem;
+    }
+  }
+}
+.laymshade{
+  background-color: rgba(0,0,0,.4);
+}
+.layer-tip{
+  background: rgba(0,0,0,0.7);
+  color: #fff !important;
+}

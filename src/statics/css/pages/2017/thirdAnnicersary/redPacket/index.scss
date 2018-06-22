@@ -1,0 +1,119 @@
+
+@import "../../../../common/reset.scss";
+
+body{
+  max-width: 7.5rem;
+  font-size: 14px;
+  margin: 0 auto !important;
+  background: url("/statics/img/pages/2017/thirdAnnicersary/redPacket/banner.png") #833cd3 no-repeat;
+  background-size: 7.5rem 12.86rem;
+  color: #313131;
+}
+body * {
+    max-width: 7.5rem;
+}
+
+.blockImg{
+  width: 100%;
+  height: auto;
+}
+
+.mt20{
+  margin-top: .2rem;
+}
+
+.mt36{
+  margin-top: .36rem;
+}
+
+.rule{
+  width: .95rem;
+  height: .86rem;
+  top: 3.08rem;
+  right: 0;
+}
+
+.wrap{
+  padding: 5.46rem .2rem .9rem .2rem;
+  .bd{
+    padding: 0 .2rem;
+    background: rgba(149,82,213,0.76);
+    border-radius: .16rem;
+    height: 12.8rem;
+    .box{
+      padding: 0 .26rem .26rem .26rem;
+      background-color: #fff;
+      border-radius: .2rem;
+      .btn{
+        background-color: #ffc000;
+        height: .9rem;
+        text-align: center;
+        border-radius: .45rem;
+        img{
+          width: 2.08rem;
+          height: .9rem;
+        }
+      }
+      .tip{
+        padding-top: .28rem;
+      }
+    }
+    .backBtn{
+      margin-top: .46rem;
+      img{
+        width: 4.2rem;
+        height: 1.18rem;
+      }
+    }
+  }
+}
+
+.share{
+  position: fixed;
+  top: 4.3rem;
+  right: .05rem;
+  width: 1.32rem;
+  height: 1.36rem;
+  z-index: 999;
+}
+.shareBtn{
+  background: url("/statics/img/pages/2017/thirdAnnicersary/index/shareBtn.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.layui-m-layermain{
+  .layer-tip{
+    background: rgba(0,0,0,.6);
+    font-size: .26rem;
+    width: 5.8rem!important;
+    height: 7.2rem!important;
+    color: #333;
+    border-radius: .08rem;
+    .layui-m-layercont{
+      padding: .2rem 0;
+    }
+    .layermcont{
+      height: .8rem!important;
+      line-height: .8rem!important;
+    }
+  }
+  .layer-tip-error{
+    background: rgba(0,0,0,.6);
+    font-size: .26rem;
+    width: 5.8rem;
+    height: .8rem;
+    color: #fff;
+    border-radius: .08rem;
+    .layermcont{
+      height: .8rem;
+      line-height: .8rem;
+    }
+  }
+}
+.laymshade{
+  background-color: rgba(0,0,0,.4);
+}
+.layer-tip{
+  background: rgba(0,0,0,0.7);
+  color: #fff !important;
+}

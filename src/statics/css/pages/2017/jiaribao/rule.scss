@@ -1,0 +1,31 @@
+
+@import "../../../common/reset.scss";
+
+body{
+  max-width: 7.5rem;
+  font-size: 14px;
+  margin: 0 auto;
+  color: #505050;
+  background-color: #f4f4f4;
+}
+
+body * {
+  max-width: 7.5rem;
+}
+
+.rule-box{
+  margin: .4rem .4rem 0 .4rem;
+  border-radius: .16rem;
+  background-color: #fff;
+  padding: .65rem .45rem .45rem .45rem;
+  font-size: 14px;
+  p{
+    padding-bottom: .2rem;
+  }
+}
+
+.copyRight{
+  height: .9rem;
+  line-height: .9rem;
+  color: #5b5b5b;
+}

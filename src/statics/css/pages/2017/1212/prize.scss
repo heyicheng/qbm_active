@@ -1,0 +1,42 @@
+
+@import "../../../common/reset.scss";
+
+body{
+  max-width: 7.5rem;
+  font-size: 14px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #5c62ff;
+}
+
+.prize-wrap{
+  width: 6.9rem;
+  margin: 0.2rem auto;
+  .prize-top{
+    width: 6.9rem;
+    height: 1.1rem;
+    background: url("/statics/img/pages/2017/1212/prize-top.png") top center no-repeat;
+    background-size: 6.9rem 1.1rem;
+  }
+  .prize-bd{
+    background-color: #26b0ff;
+    padding: 0 .2rem;
+    min-height: 8rem;
+    li{
+      height: .89rem;
+      line-height: .89rem;
+      border-bottom: 1px dashed #fff;
+      padding: 0 .1rem;
+    }
+  }
+  .prize-bottom{
+    width: 6.9rem;
+    height: .42rem;
+    background: url("/statics/img/pages/2017/1212/prize-bottom.png") top center no-repeat;
+    background-size: 6.9rem .42rem;
+  }
+}
+
+.no-data{
+  padding-top: 1rem;
+}

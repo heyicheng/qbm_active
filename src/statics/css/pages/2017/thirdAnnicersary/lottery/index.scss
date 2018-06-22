@@ -1,0 +1,505 @@
+@import "../../../../common/reset.scss";
+body {
+	background: #0f0d34;
+	font-size: 14px;
+	margin: 0;
+}
+
+.container {
+	position: relative;
+	max-width: 7.5rem;
+	width: 100%;
+	.top {
+		position: relative;
+		width: 100%;
+		height: 7.27rem;
+		background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/topBg.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+	}
+}
+.marquee {
+	color: #fff;
+}
+.myDou {
+	position: absolute;
+	top: 4.8rem;
+	left: 50%;
+	margin-left: -3.16rem;
+	width: 6.32rem;
+	height: 0.7rem;
+	background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/douBg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+	p {
+		font-size: 0.3rem;
+		line-height: 0.7rem;
+		text-align: center;
+		color: #fff;
+		span {
+			display: inline-block;
+			width: 2.9rem;
+			line-height: 0.8rem;
+			margin: 0 0.16rem;
+			padding: 0 0.18rem;
+			text-align: right;
+			color: #f00;
+		}
+	}
+}
+
+.lotteryBox {
+	position: relative;
+	width: 7.16rem;
+	height: 5.98rem;
+	margin: 0 auto;
+	margin-top: -1.0rem;
+	padding: 0.12rem;
+	padding-top: 0.68rem;
+	background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/lotteryBg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		li {
+			position: relative;
+			width: 1.7rem;
+			height: 1.4rem;
+			background: #b8a6ff;
+			border-radius: 0.1rem;
+			font-size: 0.22rem;
+			margin: 0.06rem 0;
+			overflow: hidden;
+			&:last-child {
+				line-height: 1.4rem;
+				text-align: center;
+				font-size: 0.24rem;
+				font-weight: bold;
+			}
+			span {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 0.3rem;
+				line-height: 0.3rem;
+				text-align: center;
+			}
+			&:nth-child(1) {
+				img {
+					width: 0.46rem;
+				}
+			}
+			&:nth-child(2) {
+				img {
+					width: 1rem;
+				}
+			}
+			&:nth-child(3) {
+				img {
+					width: 0.98rem;
+				}
+			}
+			&:nth-child(4) {
+				img {
+					width: 0.6rem;
+				}
+			}
+			&:nth-child(5) {
+				img {
+					width: 0.32rem;
+				}
+			}
+			&:nth-child(7) {
+				img {
+					width: 0.6rem;
+				}
+			}
+			&:nth-child(8) {
+				img {
+					width: 0.64rem;
+				}
+			}
+			&:nth-child(9) {
+				img {
+					width: 0.54rem;
+				}
+			}
+			&:nth-child(10) {
+				img {
+					width: 0.98rem;
+				}
+			}
+			p {
+				width: 100%;
+				height: 1.08rem;
+				text-align: center;
+				line-height: 1.08rem;
+				background: #fff;
+			}
+		}
+	}
+	.lotteryBtn {
+		width: 3.4rem;
+		background-color: #18084a;
+		background-image: url(/statics/img/pages/2017/thirdAnnicersary/lottery/lotteryBtn.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+	}
+	.disable {
+		background-image: url(/statics/img/pages/2017/thirdAnnicersary/lottery/noStart.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+	}
+	.active {
+		width: 1.7rem;
+		height: 1.4rem;
+		border: 3px solid;
+		border-radius: 0.16rem;
+		-webkit-border-image: url(/statics/img/pages/2017/thirdAnnicersary/lottery/borderBg.png) 6 6 round;
+		background-image: url(/statics/img/pages/2017/thirdAnnicersary/lottery/borderBg.png) 6 6 round;
+		p {
+			height: 1.00rem;
+			line-height: 1.00rem;
+		}
+		span {
+			height: 0.28rem;
+			line-height: 0.28rem;
+		}
+	}
+}
+
+.exchangeBox {
+	position: relative;
+	width: 7.16rem;
+	height: 7.38rem;
+	margin: 0 auto;
+	margin-top: 0.8rem;
+	background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/exchangeBg.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+	ul {
+		position: absolute;
+		top: 0.8rem;
+		left: 50%;
+		width: 6.8rem;
+		margin-left: -3.4rem;
+		overflow: hidden;
+		li {
+			float: left;
+			width: 25%;
+			&:nth-child(1)>p>span>img {
+				width: 0.56rem;
+			}
+			&:nth-child(2)>p>span>img {
+				width: 0.8rem;
+			}
+			&:nth-child(3)>p>span>img {
+				width: 0.98rem;
+			}
+			&:nth-child(4)>p>span>img {
+				width: 0.8rem;
+			}
+			&:nth-child(5)>p>span>img {
+				width: 0.6rem;
+			}
+			&:nth-child(6)>p>span>img {
+				width: 0.98rem;
+			}
+			&:nth-child(7)>p>span>img {
+				width: 0.6rem;
+			}
+			&:nth-child(8)>p>span>img {
+				width: 0.6rem;
+			}
+			p {
+				width: 100%;
+				height: 2.04rem;
+				padding-top: 0.2rem;
+				background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/awardBg.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: top;
+				text-align: center;
+				span {
+					display: block;
+					width: 100%;
+					line-height: 1.66rem;
+					text-align: center;
+					color: #ad4d8c;
+					img {
+						width: 0.22rem;
+					}
+				}
+				i {
+					display: block;
+					width: 100%;
+					color: #ad4d8c;
+					img {
+						width: 0.22rem;
+					}
+				}
+			}
+			button {
+				width: 1.4rem;
+				height: 0.48rem;
+				margin: 0.1rem 0.16rem;
+				background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/exchange.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: top;
+				border: none;
+				font-size: 0.22rem;
+				color: #fff;
+				outline: none;
+				&:disabled {
+					background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/noexchange.png) no-repeat;
+					background-size: 100% 100%;
+					background-position: top;
+					color: #5a5a5a;
+				}
+			}
+		}
+	}
+}
+
+
+.calculator {
+	position: absolute;
+	top: -0.42rem;
+	right: 0.3rem;
+	width: 1.02rem;
+	height: 0.94rem;
+	padding-top: 0.24rem;
+	padding-left: 0.04rem;
+	z-index: 99999;
+	background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/calculatorBg.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+	color: #fff;
+	font-size: 0.2rem;
+	text-align: center;
+}
+
+.btnBox {
+	width: 7.16rem;
+	height: 0.94rem;
+	margin: 0 auto;
+	margin-top: 0.3rem;
+	padding: 0.14rem 0.2rem;
+	border-radius: 0.1rem;
+	background: linear-gradient(#401dcb, #221157);
+	background: -webkit-linear-gradient(#401dcb, #221157);
+	button {
+		width: 3.2rem;
+		height: 0.66rem;
+		border: none;
+		font-size: 0.3rem;
+		color: #fff;
+		background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/goBtnBg.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+		outline: none;
+		&:first-child {
+			margin-right: 0.28rem;
+		}
+	}
+}
+
+.backMain {
+	width: 5.46rem;
+	height: 1.12rem;
+	margin: 0.36rem auto;
+	background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/backMain.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+}
+.successPop {
+	width: 5.4rem!important;
+	.layui-m-layercont {
+		padding: 0 0.6rem;
+		.title {
+			margin-top: 1rem;
+			color: #df2e1d;
+			font-size: 0.48rem;
+		}
+		.icon {
+			position: absolute;
+			top: -0.66rem;
+			left: 50%;
+			width: 2.28rem;
+			height: 1.52rem;
+			margin-left: -1.14rem;
+		}
+		p {
+			font-size: 0.28rem!important;
+			margin: 0.3rem 0;
+		}
+		._imgBox {
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.layui-m-layerbtn {
+		height: 0.8rem;
+		margin-top: 0.54rem;
+		margin-bottom: 0.3rem;
+		background: none;
+		border: none;
+		span[yes] {
+			display: block;
+			width: 2.78rem!important;
+			height: 0.8rem!important;
+			margin: 0 auto;
+			background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/btnBg.png);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: top;
+			color: #fff;
+			font-size: 0.3rem;
+			line-height: 0.8rem;
+		}
+	}
+}
+.fail {
+	.layui-m-layercont {
+		.icon {
+			width: 1.52rem;
+			margin-left: -0.76rem;
+		}
+		.title {
+			margin-top: 1rem;
+			color: #313131;
+			font-size: 0.42rem;
+		}
+	}
+}
+.calculatorPop {
+	width: 6.2rem!important;
+	.layui-m-layercont {
+		text-align: left;
+		padding: 0.3rem;
+	}
+	.layui-m-layerbtn {
+		height: 0.8rem;
+		margin-bottom: 0.3rem;
+		background: none;
+		border: none;
+		span[yes] {
+			display: block;
+			width: 2.78rem!important;
+			height: 0.8rem!important;
+			margin: 0 auto;
+			background: url(/statics/img/pages/2017/thirdAnnicersary/lottery/btnBg.png);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: top;
+			color: #fff;
+			font-size: 0.3rem;
+			line-height: 0.8rem;
+		}
+	}
+}
+.finBox {
+	border-bottom: 1px solid #e5e5e5;
+	.item {
+		height: 0.8rem;
+		margin: 0.3rem 0;
+		font-size: 0.28rem;
+		line-height: 0.8rem;
+		input[type='number'] {
+			box-sizing: border-box;
+			width: 3.26rem;
+			height: 0.8rem;
+			border: 0.04rem solid #e5e5e5;
+			border-radius: 0.8rem;
+			margin: 0 0.1rem;
+			padding: 0 0.3rem;
+			outline: none;
+			background: none;
+		}
+		&:nth-child(2) {
+			input[type='radio'] {
+				display: inline-block;
+				margin: 0 0.3rem;
+			}
+		}
+	}
+}
+.getDou {
+	height: 1.1rem;
+	line-height: 1.1rem;
+	border-bottom: 1px solid #e5e5e5;
+	overflow: hidden;
+	label {
+		float: left;
+	}
+	span {
+		float: right;
+		padding-right: 0.3rem;
+		i {
+			padding-right: 0.16rem;
+			font-size: 0.48rem;
+			color: #cd2f2f;
+		}
+	}
+}
+.content {
+	width: 100%;
+	min-height: 100vh;
+	padding: 0.3rem 0.4rem;
+	font-size: 0.24rem;
+	.box {
+		width: 6.68rem;
+		min-height: 7.94rem;
+		border-radius: 0.1rem;
+		padding: 0.3rem 0.2rem;
+		margin: 0 auto;
+		background: #fff;
+		p {
+			width: 100%;
+			margin: 0;
+			margin-bottom: 0.4rem;
+			color: #333;
+			&:last-child {
+				margin: 0;
+			}
+		}
+		.item {
+			overflow: hidden;
+			padding: 0.3rem 0.2rem;
+			margin: 0 0.1rem;
+			border-bottom: 1px solid #000;
+			font-size: 0.24rem;
+			span:nth-child(1) {
+				float: left;
+				i {
+					color: #999;
+				}
+			}
+			span:nth-child(2) {
+				float: right;
+				i {
+					color: #999;
+				}
+			}
+		}
+	}
+	.tip {
+		position: absolute;
+		bottom: 0.3rem;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		color: #a397d8;
+	}
+}

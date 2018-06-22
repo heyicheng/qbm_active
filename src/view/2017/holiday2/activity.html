@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>钱保姆</title>
+  <link rel="stylesheet" href="/statics/js/plugins/swiper/swiper.min.css" media="screen" />
+  <link rel="stylesheet" href="/statics/css/common/reset.css">
+  <link rel="stylesheet" href="/statics/css/pages/2017/holiday2/activity.css">
+  <link rel="stylesheet" href="/statics/js/plugins/liMarquee/liMarquee.css">
+  <script src="/statics/js/plugins/adaptive.min.js"></script>
+  <script src="/statics/js/common/common.js"></script>
+  <script src="/statics/js/plugins/jquery-3.2.1.min.js"></script>
+  <script src="/statics/js/plugins/liMarquee/jquery.liMarquee.js"></script>
+
+</head>
+<body class="pos-rel">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/statics/img/pages/2017/holiday2/banner1118.png">
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="banner-head pos-abs">
+    <div class="timeout fn-fl"></div>
+    <div class="ruleBtn fn-fl">活动规则</div>
+  </div>
+  <!-- 活动开始 -->
+  <div class="banner-marquee hide">
+    <div class="laba-icon"><img class= "imgWidth1" src="/statics/img/pages/2017/holiday2/laba.png"/></div>
+    <div class="laba">
+      <script id="borrow-list1-template" type="text/html">
+        {{each dataList}}
+          <a class="list-name">{{$value.phone}}抽中{{$value.name}}</a>
+        {{/each}}
+      </script>
+    </div>
+  </div>
+  <!-- 活动未开始 -->
+  <div class="forum hide">
+    <p class="go-forum"><span class="review-forum">活动回顾</span><span class="guild-forum">晒中奖攻略</span></p>
+  </div>
+
+  <!-- 礼盒 -->
+  <div class="gift-wrap">
+    <div class="gift">
+      <h4>您有假日币:<span class="counts">0</span>枚</h4>
+      <p class="gift-num">(投资假日宝1000元=1个假日币)</p>
+      <div class="gift-box">
+        <div class="gift-item gift-silver ">
+          <img class= "imgWidth2" src="/statics/img/pages/2017/holiday2/silver-close.png"/>
+          <div class="gift-name"><span>白银礼盒</span></div>
+          <div class="gift-text gift-text1 btn-yugao" type="0">查看奖品</div>
+        </div>
+        <div class="gift-item gift-gold">
+          <img class= "imgWidth2" src="/statics/img/pages/2017/holiday2/gold-close.png"/>
+          <div class="gift-name">黄金礼盒</div>
+          <div class="gift-text gift-text2 btn-yugao" type="2">查看奖品</div>
+        </div>
+        <div class="gift-item gift-Diamonds">
+          <img class= "imgWidth1" src="/statics/img/pages/2017/holiday2/diamonds-open.png"/>
+          <div class="gift-name">钻石礼盒</div>
+          <div class="gift-text gift-text3 btn-yugao"  type="1">查看奖品</div>
+        </div>
+      </div>
+      <div class="arrow">
+        <div class="arrow1"></div>
+      </div>
+      <div class="gift-list">
+        <p>需要使用<span class="holiday-bi">10个假日币</span>开启礼盒，随机抽取以下奖品：</p>
+        <div class="gift-lists gift-lists1 hide">
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red2.png"/>
+            <div class="gift-name">2元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red5.png"/>
+            <div class="gift-name">5元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/lxx.png"/>
+            <div class="gift-name">小米旅行箱</div>
+          </div>
+        </div>
+
+        <div class="gift-lists gift-lists2 hide">
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red10.png"/>
+            <div class="gift-name">10元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red20.png"/>
+            <div class="gift-name">20元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/phc.png"/>
+            <div class="gift-name">小米平衡车</div>
+          </div>
+        </div>
+
+        <div class="gift-lists gift-lists3">
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red30.png"/>
+            <div class="gift-name">30元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/red50.png"/>
+            <div class="gift-name">50元红包</div>
+          </div>
+          <div class="gift-list-item">
+            <img class= "list-img" src="/statics/img/pages/2017/holiday2/iphone.png"/>
+            <div class="gift-name">iPhone8</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--直播-->
+  <div class="zhibo hide">
+    <img src="/statics/img/pages/2017/holiday2/zhibo.png"/>
+  </div>
+  <!-- 理财区 -->
+  <div class="borrow-list">
+    <div class="borrowList" id="borrowList" >
+      <div class="nonTip"></div>
+      <script id="borrow-list2-template" type="text/html">
+        {{each datalist}}
+        <div class="borrowDetail">
+          <h1><span class="big1 fn-fl" data-financingId="{{$value.id}}" data-isDetailNew="{{$value.is_new_detail}}">{{$value.name}}</span><span class="big2 fn-fl">{{startB $value.valid_date}}</span></h1>
+          <p class="rate">
+            <span class="big1 fn-fl">{{$value.basic_apr}}<span class="small">%+{{$value.reward_apr}}%</span></span>
+            <span class="big2 fn-fl">{{timeLimitFun1 $value.status $value.isday $value.timeLimitDay $value.timeLimit}}</span>
+          </p>
+          <p class="intro">
+            <span class="year">预期年化</span>
+            <span class="time">投资期限</span>
+          </p>
+          <p class="process pos-rel">
+            <span class="pro-start pos-abs {{imgFun $value.scales}}"></span>
+            <span class="pro-line pos-abs"><span class="bg-span " style="width:{{scaleWidth $value.scales}}%"></span></span>
+            <span class="pro-end pos-abs"></span>
+            <span class="process-num pos-abs">{{scaleWidth $value.scales}}%</span>
+          </p>
+        </div>
+        {{/each}}
+      </script>
+    </div>
+  </div>
+  <!-- 侧边栏分享 -->
+  <div class="side-share" id="side-share">
+    <a class="share"></a>
+  </div>
+
+
+  <p class="tip2 text-center">我获得的奖品请前往<span>APP-我的-奖品区-抽奖区</span>查询</p>
+  <p class="tip3 text-center">*钱保姆保留对本次活动在法律允许范围内的解释权</p>
+  <input type="hidden" id="nid" val=''>
+  <input type="hidden" id="startTime" val=''>
+  <input type="hidden" id="endTime" val=''>
+
+
+  <script src="/statics/js/plugins/sea.js"></script>
+  <script src="/statics/js/plugins/seajs-css.js"></script>
+  <script src="/statics/js/common/sea-config.js"></script>
+  <script>
+    seajs.use("/statics/js/pages/2017/holiday2/activity.js");
+  </script>
+</body>
+</html>

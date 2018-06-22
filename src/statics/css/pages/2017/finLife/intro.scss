@@ -1,0 +1,49 @@
+@import "../../../common/reset.scss";
+
+body{
+  max-width: 7.5rem;
+  font-size: 14px;
+  margin: 0 auto !important;
+  background: url("/statics/img/pages/2017/finLife/intro/top.png") #6929d2 no-repeat;
+  background-size: 7.5rem 7.3rem;
+}
+body * {
+    max-width: 7.5rem;
+}
+
+
+.blockImg{
+  width: 100%;
+  height: auto;
+}
+
+.mt30{
+  margin-top: .3rem;
+}
+.wrap{
+  padding: 7.52rem .35rem 1rem .35rem;
+  p{
+    color: #380c7f;
+    line-height: .9rem;
+  }
+}
+.bar{
+  position: fixed;
+  height: 1rem;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .logo{
+    width: 2.6rem;
+    height: .85rem;
+    margin: 0.08rem 0 0 .3rem;
+  }
+  .btn{
+    width: 1.6rem;
+    height: .6rem;
+    margin: .2rem .3rem 0 0; 
+  }
+}
+

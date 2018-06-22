@@ -1,0 +1,1029 @@
+@import "../../../common/reset.scss";
+
+body{
+  max-width: 7.5rem;
+  font-size: .14rem;
+  margin: 0 auto;
+  color: #505050;
+  background-color: #de1a24;
+}
+
+.hide{
+	display: none;
+}
+
+.imgBlock{
+  width: 100%;
+  height: auto;
+}
+
+//未参加活动
+.not-attend{
+	height: 12.3rem;
+	background: url("/statics/img/pages/2018/worldCup/not-attend-banner.png") top no-repeat;
+	background-size: 100% 100%;
+	color: #fff;
+	.join-btn{
+		left: .7rem;
+		bottom: .74rem;
+		width: 6rem;
+		height: 1.2rem;
+		line-height: 1.1rem;
+		font-size: .4rem;
+		letter-spacing: .1rem;
+		background-color: #3758ea;
+		border: .04rem solid #000;
+		border-radius: .2rem;
+	}
+	.join-success{
+		left: .52rem;
+		bottom: .24rem;
+		width: 6.48rem;
+		height: 2.22rem;
+		background: url("/statics/img/pages/2018/worldCup/join-bg.png") top no-repeat;
+		background-size: 100% 100%;
+		.title{
+			font-size: .36rem;
+			font-weight: normal;
+			padding-top: .3rem;
+		}
+		.time{
+			color: #edaebc;
+		}
+
+	}
+}
+
+//已参加活动
+.attend{
+	padding: 5.6rem .36rem 0 .36rem;
+	min-height: 11rem;
+	background: url("/statics/img/pages/2018/worldCup/attend-banner.png") top no-repeat;
+	background-size: 7.5rem 11rem;
+	.guessing{
+		padding-top: .88rem;
+		padding-bottom: .3rem;
+		.title{
+			top: 0;
+			left: 1.22rem;
+			width: 4.26rem;
+			height: 1.34rem;
+			background: url("/statics/img/pages/2018/worldCup/guessing-title.png") top no-repeat;
+			background-size: 4.26rem 1.34rem;
+		}
+		.record{
+			width: 1.24rem;
+			height: 1.34rem;
+			line-height: 1.3rem;
+			top: 0;
+			right: 0;
+			color: #fff;
+			em{
+				text-decoration: underline;
+			}
+		}
+		.bd{
+			background-color: #fff;
+			border: .05rem solid #000;
+			border-radius: .16rem;
+      min-height: 2rem;
+			.count{
+				padding-top: .42rem;
+				height: 1rem;
+				line-height: .64rem;
+				font-size: .26rem;
+				display: -webkit-flex; /* Safari */
+  			display: flex;
+				span{
+					height: 1rem;
+					line-height: .64rem;
+					width: 50%;
+					.line{
+						top: .22rem;
+						right: 0;
+						height: .28rem;
+						border-right: 2px solid #c9c8c8;
+					}
+				}
+				em{
+					font-size: .46rem;
+					padding: 0 .05rem;
+					color: #ff6900;
+				}
+			}
+			.item{
+				margin-top: .2rem;
+				width: 6.69rem;
+				height: 3.26rem;
+				background: url("/statics/img/pages/2018/worldCup/guessing-item-bg.png") top no-repeat;
+				background-size: 6.69rem 3.26rem;
+				.item-title{
+					top: 0;
+					left: 1.23rem;
+					width: 4.17rem;
+					height: .4rem;
+					color: #fff;
+					span{
+						float: left;
+						height: .4rem;
+						line-height: .4rem;
+						text-align: center;
+						font-size: .26rem;
+					}
+					.date{
+						width: 2.12rem;
+					}
+					.txt{
+						width: 2.04rem;
+					}
+				}
+				.countrys{
+					padding: .4rem .58rem 0 .64rem;
+					.countrys-item{
+						width: 1.48rem;
+						color: #fff;
+						h2{
+							font-size: .26rem;
+							padding-top: .3rem;
+						}
+						img{
+							width: 1.48rem;
+							height: .73rem;
+							margin-top: .1rem;
+						}
+					}
+				}
+				.btns{
+					padding: .18rem .58rem 0 .64rem;
+					.b1{
+						margin-left: .24rem;
+					}
+					.b2{
+						margin-left: .96rem;
+					}
+					.b3{
+						margin-right: .24rem;
+					}
+					.vote-btn{
+						display: inline-block;
+						width: 1rem;
+						height: .6rem;
+						line-height: .6rem;
+						font-size: .32rem;
+						background-color: #ffd21f;
+						color: #333;
+						border-radius: .12rem;
+					}
+					.selected{
+						background: url("/statics/img/pages/2018/worldCup/selected-icon.png") #ff6900 top left no-repeat;
+						background-size: .32rem .2rem;
+					}
+					.dis{
+						color: #747474;
+						background-color: #b4b4b4;
+					}
+				}
+			}
+		}
+	}
+	.guessing-rankings{
+		padding-top: .55rem;
+		padding-bottom: .3rem;
+		color: #fff;
+		.title{
+			top: 0rem;
+			left: 1.22rem;
+			width: 4.26rem;
+			height: .92rem;
+			background: url("/statics/img/pages/2018/worldCup/guessing-rankings-title.png") top no-repeat;
+			background-size: 4.26rem .92rem;
+		}
+		.more{
+			width: 1.24rem;
+			height: .92rem;
+			line-height: .6rem;
+			top: 0;
+			right: 0;
+			color: #fff;
+			em{
+				text-decoration: underline;
+			}
+		}
+		.bd{
+			background-color: #3847d5;
+			border: .05rem solid #000;
+			border-radius: .16rem;
+			height: 5.48rem;
+      padding: 0 .46rem;
+      li{
+        height: 1rem;
+        line-height: 1rem;
+        font-size: .26rem;
+        overflow: hidden;
+        .no{
+          width: .72rem;
+        }
+        .name{
+          margin-left: .1rem;
+          width: 1.2rem;
+        }
+        .phone{
+          width: 2.4rem;
+        }
+        .coin{
+          text-align: right;
+        }
+        .me{
+          background: url("/statics/img/pages/2018/worldCup/me.png")  center no-repeat;
+          background-size: .62rem .61rem;
+        }
+        .one{
+          background: url("/statics/img/pages/2018/worldCup/one.png")  center no-repeat;
+          background-size: .62rem .75rem;
+        }
+        .two{
+          background: url("/statics/img/pages/2018/worldCup/two.png")  center no-repeat;
+          background-size: .62rem .71rem;
+        }
+        .three{
+          background: url("/statics/img/pages/2018/worldCup/three.png")  center no-repeat;
+          background-size: .62rem .72rem;
+        }
+      }
+      .head{
+        font-size: .3rem;
+        color: #ffd21f;
+        margin-top: .3rem;
+      }
+      .line{
+        border-bottom: 1px solid #000;
+      }
+      .nodata{
+        padding: .5rem 0 .3rem 0;
+        font-size: .28rem;
+        overflow: hidden;
+      }
+		}
+	}
+	.borrow-list{
+		padding-top: .56rem;
+		padding-bottom: .3rem;
+		.title{
+			top: 0rem;
+			left: 1.22rem;
+			width: 4.26rem;
+			height: 1rem;
+			background: url("/statics/img/pages/2018/worldCup/borrow-list-title.png") top no-repeat;
+			background-size: 4.26rem 1rem;
+		}
+		.bd{
+      padding-top: .38rem;
+			background-color: #3847d5;
+			border: .05rem solid #000;
+			border-radius: .16rem;
+			min-height: 2rem;
+      .item{
+        margin-top: .2rem;
+        background-color: #fff;
+        border-radius: .16rem;
+        color: #333;
+        padding: .3rem .3rem .2rem .3rem;
+        h1{
+          height: .24rem;
+          line-height: .24rem;
+          font-weight: normal;
+          font-size: .24rem;
+          .big1{
+            display: block;
+            width: 3rem;
+            color: #333;
+          }
+          .big2{
+            display: block;
+            width: 3rem;
+            text-indent: 1.25rem;
+            color: #333;
+          }
+        }
+        .rate{
+          height: .44rem;
+          line-height: .44rem;
+          font-size: .44rem;
+          padding-top: 0.24rem;
+          .big1{
+            display: block;
+            width: 3.02rem;
+            color: #ff5d11;
+            text-indent: 0.56rem;
+            .small{
+              font-size: .22rem;
+              color: #103153;
+            }
+          }
+          .big2{
+            display: block;
+            width: 3.02rem;
+            text-indent: 1.48rem;
+            color: #103153;
+            .small{
+              font-size: .22rem;
+            }
+          }
+        }
+        .intro{
+          height: .37rem;
+          padding: .10rem 0 0 0.47rem;
+          line-height: .22rem;
+          font-size: .22rem;
+          color: #999;
+          .time{
+            margin-left: 3.06rem;
+          }
+        }
+        .process{
+          height: .24rem;
+          position: relative;
+        }
+        .pro-start-changed{
+          background: url("/statics/img/pages/2018/jiaribao/left.png") top center no-repeat !important;
+          background-size:  0.11rem 0.09rem !important;
+        }
+        .process{
+          span{
+            display: inline-block;
+            float: left;
+          }
+          .pro-start{
+            top: 0.08rem;
+            left: 0;
+            width: .11rem;
+            height: .09rem;
+            background: url("/statics/img/pages/2018/jiaribao/pro-start2.png") top center no-repeat;
+            background-size: 0.11rem 0.09rem;
+          }
+          .pro-line{
+            top:0.11rem;
+            left: 0.11rem;
+            width: 5.14rem;
+            height: .03rem;
+            background: #e9e7e7;
+            .bg-span{
+              left: 0;
+              top: .02rem;
+              width: 5.07rem;
+              height: 0.03rem;
+              background: #ffa276;
+            }
+          }
+          .pro-end{
+            top:0.08rem;
+            right: 0.72rem;
+            width: .13rem;
+            height: .09rem;
+            background: url("/statics/img/pages/2018/jiaribao/right.png") top center no-repeat;
+            background-size:  0.11rem 0.09rem;
+          }
+          .process-num{
+            top: 0;
+            right: 0;
+            text-align: right;
+            width: .75rem;
+            height: .24rem;
+            line-height: .24rem;
+            color: #333;
+            font-size: .24rem;
+          }
+        }
+      }
+		}
+	}
+	.prize-exchange{
+		padding-bottom: .26rem;
+	}
+}
+
+//兑换区
+.exchange-wrap{
+  padding: 5.8rem .36rem 0 .36rem;
+	background: url("/statics/img/pages/2018/worldCup/exchange-banner.png") top no-repeat;
+	background-size: 7.5rem 10.4rem;
+  .exchange-box{
+		padding-top: .62rem;
+		padding-bottom: .3rem;
+		.title{
+			top: 0;
+			left: 1.27rem;
+			width: 4.25rem;
+			height: .9rem;
+			background: url("/statics/img/pages/2018/worldCup/exchange-box-title.png") top no-repeat;
+			background-size: 4.26rem .9rem;
+		}
+		.record{
+			width: 1.24rem;
+			height: 1.34rem;
+			line-height: 1.3rem;
+			top: 0;
+			right: 0;
+			color: #fff;
+			em{
+				text-decoration: underline;
+			}
+		}
+		.bd{
+			background-color: #fff;
+			border: .05rem solid #000;
+			border-radius: .16rem;
+
+      padding: .78rem .4rem .3rem .4rem;
+      .count{
+        margin: 0 auto;
+        padding-top: .04rem;
+        width: 4rem;
+        height: 1.1rem;
+        line-height: 1.1rem;
+        background: url("/statics/img/pages/2018/worldCup/exchange-count.png") top no-repeat;
+  			background-size: 4rem 1.14rem;
+        color: #fff;
+        font-size: .3rem;
+        em{
+          font-size: .36rem;
+          color: #ffd21f;
+          padding: 0 .06rem;
+        }
+      }
+      .top-level{
+        margin: .6rem auto 0 auto;
+        width: 2.6rem;
+        height: 3rem;
+        .pic{
+          img{
+            width: 1.58rem;
+            height: 1.6rem;
+          }
+        }
+        .text{
+          display: -webkit-flex; /* Safari */
+    			display: flex;
+          height: .8rem;
+          line-height: .8rem;
+          font-size: .28rem;
+          span{
+            width: 50%;
+            &.name{
+              color: #333;
+            }
+            &.status{
+              color: #999;
+            }
+          }
+        }
+        .receive-btn{
+          display: inline-block;
+          width: 2.6rem;
+          height: .6rem;
+          line-height: .6rem;
+          font-size: .24rem;
+          color: #fff;
+          border: none;
+          border-radius: .16rem;
+        }
+        .dis{
+          background-color: #cdcdcd;
+        }
+
+      }
+      .prize-list{
+        display: -webkit-flex; /* Safari */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .item{
+          margin-top: .54rem;
+          width: 2.76rem;
+          height: 2.92rem;
+          .pic{
+            img{
+              width: 1.56rem;
+              height: 1.7rem;
+            }
+          }
+          .text{
+            display: -webkit-flex; /* Safari */
+      			display: flex;
+            justify-content: space-between;
+            height: .62rem;
+            line-height: .62rem;
+            font-size: .24rem;
+            span{
+
+              &.name{
+                color: #333;
+              }
+              &.status{
+                color: #999;
+                font-size: .22rem;
+              }
+            }
+          }
+          .receive-btn{
+            display: inline-block;
+            width: 100%;
+            height: .6rem;
+            line-height: .6rem;
+            font-size: .24rem;
+            color: #fff;
+            border: none;
+            border-radius: .16rem;
+            background-color: #ff6900;
+          }
+          .dis{
+            background-color: #cdcdcd;
+          }
+        }
+      }
+		}
+	}
+  .exchange-rankings{
+		padding-top: .55rem;
+		padding-bottom: .3rem;
+		color: #fff;
+		.title{
+			top: 0rem;
+			left: 1.22rem;
+			width: 4.26rem;
+			height: .92rem;
+			background: url("/statics/img/pages/2018/worldCup/guessing-rankings-title.png") top no-repeat;
+			background-size: 4.26rem .92rem;
+		}
+		.more{
+			width: 1.24rem;
+			height: .92rem;
+			line-height: .6rem;
+			top: 0;
+			right: 0;
+			color: #fff;
+			em{
+				text-decoration: underline;
+			}
+		}
+		.bd{
+			background-color: #3847d5;
+			border: .05rem solid #000;
+			border-radius: .16rem;
+			height: 5.48rem;
+      padding: 0 .46rem;
+      li{
+        height: 1rem;
+        line-height: 1rem;
+        font-size: .26rem;
+        overflow: hidden;
+        .no{
+          width: .72rem;
+        }
+        .name{
+          margin-left: .1rem;
+          width: 1.2rem;
+        }
+        .phone{
+          width: 2.4rem;
+        }
+        .coin{
+          text-align: right;
+        }
+        .me{
+          background: url("/statics/img/pages/2018/worldCup/me.png")  center no-repeat;
+          background-size: .62rem .61rem;
+        }
+        .one{
+          background: url("/statics/img/pages/2018/worldCup/one.png")  center no-repeat;
+          background-size: .62rem .75rem;
+        }
+        .two{
+          background: url("/statics/img/pages/2018/worldCup/two.png")  center no-repeat;
+          background-size: .62rem .71rem;
+        }
+        .three{
+          background: url("/statics/img/pages/2018/worldCup/three.png")  center no-repeat;
+          background-size: .62rem .72rem;
+        }
+      }
+      .head{
+        font-size: .3rem;
+        color: #ffd21f;
+        margin-top: .3rem;
+      }
+      .line{
+        border-bottom: 1px solid #000;
+      }
+      .nodata{
+        padding: .5rem 0 .3rem 0;
+        font-size: .28rem;
+        overflow: hidden;
+      }
+		}
+	}
+  .exchange-record{
+    padding-top: .53rem;
+		padding-bottom: .3rem;
+		color: #fff;
+		.title{
+			top: 0rem;
+			left: 1.27rem;
+			width: 4.25rem;
+			height: .9rem;
+			background: url("/statics/img/pages/2018/worldCup/exchange-record-title.png") top no-repeat;
+			background-size: 4.25rem .9rem;
+		}
+    .more{
+			width: 1.24rem;
+			height: .92rem;
+			line-height: .6rem;
+			top: 0;
+			right: 0;
+			color: #fff;
+			em{
+				text-decoration: underline;
+			}
+		}
+    .bd{
+      background-color: #3847d5;
+			border: .05rem solid #000;
+			border-radius: .16rem;
+			min-height: 5.8rem;
+      padding: .33rem .46rem 0 .46rem;
+      li{
+        padding: .52rem 0 .3rem 0;
+        border-bottom: 1px solid #000;
+        font-size: .26rem;
+        overflow: hidden;
+        &.head{
+          padding: .36rem 0 0 0;
+          color: #ffd21f;
+          font-size: .3rem;
+          border-bottom: none;
+        }
+        &:last-child{
+          border-bottom: none;
+        }
+        .time{
+          width: 2.26rem;
+        }
+        .prize{
+          width: 2.38rem;
+        }
+      }
+    }
+
+  }
+  .exchange-coin-record{
+    padding-top: .62rem;
+		padding-bottom: .3rem;
+		color: #fff;
+		.title{
+			top: 0rem;
+			left: 1.27rem;
+			width: 4.25rem;
+			height: 1rem;
+			background: url("/statics/img/pages/2018/worldCup/exchange-coin-record-title.png") top no-repeat;
+			background-size: 4.25rem 1rem;
+		}
+    .more{
+			width: 1.24rem;
+			height: .92rem;
+			line-height: .6rem;
+			top: .06rem;
+			right: 0;
+			color: #fff;
+      font-size: .24rem;
+			em{
+				text-decoration: underline;
+			}
+		}
+    .bd{
+      background-color: #3847d5;
+			border: .05rem solid #000;
+			border-radius: .16rem;
+			min-height: 5.8rem;
+      padding: .33rem .46rem 0 .46rem;
+      li{
+        padding: .52rem 0 .3rem 0;
+        border-bottom: 1px solid #000;
+        font-size: .26rem;
+        overflow: hidden;
+        &.head{
+          padding: .36rem 0 0 0;
+          color: #ffd21f;
+          font-size: .3rem;
+          border-bottom: none;
+        }
+        &:last-child{
+          border-bottom: none;
+        }
+        .time{
+          width: 1.72rem;
+        }
+        .content{
+          width: 3.1rem;
+        }
+      }
+    }
+
+  }
+  .exchange-rule{
+    padding-top: .6rem;
+		color: #333;
+		.title{
+			top: 0rem;
+			left: 1.22rem;
+			width: 4.25rem;
+			height: .9rem;
+			background: url("/statics/img/pages/2018/worldCup/exchange-rule-title.png") top no-repeat;
+			background-size: 4.25rem .9rem;
+		}
+    .bd{
+      background-color: #ffd21f;
+			border: .05rem solid #000;
+			border-radius: .16rem;
+      padding: .34rem .4rem .64rem .4rem;
+      p{
+        padding-top: .3rem;
+      }
+    }
+
+  }
+
+}
+
+//活动规则
+.rule-btn{
+	width: .96rem;
+	height: .86rem;
+	top: .5rem;
+	right: 0;
+	background: url("/statics/img/pages/2018/worldCup/rule-btn.png") top no-repeat;
+	background-size: .96rem .86rem;
+}
+.rule-wrap{
+	width: 6.78rem;
+	margin: 0 auto;
+	padding-top: .6rem;
+	.title{
+		top: 0rem;
+		left: 1.26rem;
+		width: 4.26rem;
+		height: .84rem;
+		background: url("/statics/img/pages/2018/worldCup/rule-title.png") top no-repeat;
+		background-size: 4.26rem .84rem;
+	}
+	.bd{
+		font-size: .28rem;
+		padding: .5rem .44rem 0 .44rem;
+		background-color: #ffd21f;
+		border: .05rem solid #000;
+		border-radius: .16rem;
+		li{
+			padding-bottom: .4rem;
+		}
+	}
+}
+
+.copyRight{
+	color: #333;
+	font-size: .28rem;
+	padding: .4rem 0 .6rem 0;
+}
+
+.layui-m-layermain{
+  .layer-tip{
+    background: rgba(0,0,0,.6);
+    font-size: .26rem;
+    width: 5.8rem!important;
+    padding: .3rem 0;
+    color: #333;
+    border-radius: .08rem;
+    .layui-m-layercont{
+      padding: 0 !important;
+    }
+    .layermcont{
+      height: .8rem!important;
+      line-height: .8rem!important;
+    }
+  }
+  //定制弹窗
+  .layer-qbm{
+    background: none;
+    font-size: .26rem;
+    width: 6.8rem!important;
+    color: #333;
+    .layui-m-layercont{
+      padding: 0 !important;
+    }
+    .layermcont{
+      height: .8rem!important;
+      line-height: .8rem!important;
+    }
+    //通用弹窗
+    .tip-box{
+      width: 6.8rem;
+      height: 5.3rem;
+      padding-top: .62rem;
+      .calculator-title{
+        top: .1rem;
+        left: 1.28rem;
+        width: 4.25rem;
+        height: .78rem;
+        line-height: .82rem;
+        font-size: .36rem;
+        background: url("/statics/img/pages/2018/worldCup/calculator-title.png") top no-repeat;
+        background-size: 4.27rem .78rem;
+        color: #fff;
+        letter-spacing: .1rem;
+        text-indent: .7rem;
+      }
+
+      .login-title{
+        top: 0;
+        left: 1.24rem;
+        width: 4.27rem;
+        height: 1.07rem;
+        line-height: 1.2rem;
+        font-size: .36rem;
+        background: url("/statics/img/pages/2018/worldCup/login-tip-title.png") top no-repeat;
+        background-size: 4.27rem 1.07rem;
+        color: #fff;
+        letter-spacing: .1rem;
+        text-indent: .6rem;
+      }
+      .title{
+        top: 0;
+        left: 1.28rem;
+        width: 4.25rem;
+        height: .92rem;
+        line-height: .96rem;
+        font-size: .36rem;
+        background: url("/statics/img/pages/2018/worldCup/guessTip-title.png") top no-repeat;
+        background-size: 4.25rem .92rem;
+        color: #fff;
+        letter-spacing: .1rem;
+        text-indent: .6rem;
+      }
+      .exchange-title{
+        top: 0;
+        left: 1.28rem;
+        width: 4.25rem;
+        height: .92rem;
+        line-height: .96rem;
+        font-size: .36rem;
+        background: url("/statics/img/pages/2018/worldCup/exchange-title.png") top no-repeat;
+        background-size: 4.25rem .92rem;
+        color: #fff;
+        letter-spacing: .1rem;
+        text-indent: .6rem;
+      }
+      .exchange-error-title{
+        top: 0;
+        left: 1.28rem;
+        width: 4.25rem;
+        height: .92rem;
+        line-height: .96rem;
+        font-size: .36rem;
+        background: url("/statics/img/pages/2018/worldCup/exchange-error-title.png") top no-repeat;
+        background-size: 4.25rem .92rem;
+        color: #fff;
+        letter-spacing: .1rem;
+        text-indent: .6rem;
+      }
+      .bd{
+        padding: .4rem .6rem 0 .6rem;
+        background-color: #fff;
+  			border: .05rem solid #000;
+  			border-radius: .16rem;
+        height: 4.3rem;
+        color: #333;
+        .content{
+          height: 2.8rem;
+          font-size: .28rem;
+          line-height: .5rem;
+          p.line1{
+            line-height: 2.8rem;
+          }
+          p.line2{
+            padding-top: 1rem;
+          }
+          p.line3{
+            padding-top: .7rem;
+          }
+          .formItem{
+            li{
+              margin-top: .26rem;
+              border-bottom: 1px solid #e5e5e5;
+              height: .5rem;
+              font-size: .28rem;
+              color: #999;
+              span{
+                display: inline-block;
+              }
+              .formDay{
+                width: 1.18rem;
+
+              }
+              .formInput{
+                display: inline-block;
+                width: 3.8rem;
+                height: .5rem;
+                border: none;
+                color: #333;
+                font-size: .28rem;
+                text-align: right;
+              }
+              .formInput[placeholder]{
+                color: #333 !important;
+              }
+              .formUnit{
+                text-align: right;
+                width: .5rem;
+              }
+            }
+            .result{
+              border: 0;
+              text-align: right;
+              em{
+                display: inline-block;
+                width: 1rem;
+                font-size: .36rem;
+                color: #ff6900;
+              }
+            }
+          }
+
+        }
+        .btns{
+          height: .8rem;
+          .btn{
+            display: inline-block;
+            width: 2.46rem;
+            height: .8rem;
+            line-height: .8rem;
+            text-align: center;
+            font-size: .32rem;
+            color: #333;
+            border-radius: .12rem;
+          }
+          .confirm{
+            background-color: #ffd21f;
+          }
+          .bigconfirm{
+            background-color: #ffd21f;
+            width: 4rem;
+          }
+          .cancle{
+            background-color: #d8d8d8;
+          }
+        }
+      }
+    }
+  }
+  .layer-tip-error{
+    background: rgba(0,0,0,.6);
+    font-size: .26rem;
+    width: 5.8rem;
+    height: .8rem;
+    color: #fff;
+    border-radius: .08rem;
+    .layermcont{
+      height: .8rem;
+      line-height: .8rem;
+    }
+  }
+}
+.laymshade{
+  background-color: rgba(0,0,0,.6);
+}
+.layer-tip{
+  background: rgba(0,0,0,0.6);
+  color: #fff !important;
+}
+
+//分享
+.side-icons{
+	bottom: .8rem;
+  right: .1rem;
+  width: .94rem;
+  height: 2.5rem;
+	.calculator-icon{
+		top: 0;
+		right: 0;
+		width: .94rem;
+		height: .94rem;
+		background: url("/statics/img/pages/2018/worldCup/calculator-icon.png") no-repeat;
+	  background-size: .94rem .94rem;
+	}
+	.share-icon{
+		bottom: 0;
+		right: 0;
+		width: .94rem;
+		height: 1.31rem;
+		background: url("/statics/img/pages/2018/worldCup/share-icon.png") no-repeat;
+	  background-size: .94rem 1.31rem;
+	}
+}

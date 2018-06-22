@@ -1,0 +1,372 @@
+
+body{
+  font-size: 14px;
+  max-width: 7.5rem;
+  margin: 0 auto !important;
+  background-color: #f4f4f4;
+  color: #505050;
+}
+.hide{
+  display: none;
+}
+.btn-start{//活动开始 有抽奖次数 ---领取奖品按钮
+  background: #ff8f34;
+  color: #fff;
+}
+.btn-start-disabled{//活动开始 无抽奖次数 ---领取奖品按钮
+  background: #b9b9b9;
+  color: #fff;
+  pointer-events: none;
+}
+.btn-yugao{//活动未开始 ---查看奖品
+  background: #fff;
+  border: 1px solid #ff8f34;
+  color: #ff8f34;
+}
+img{
+  display: block;
+}
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+
+.mark-details{
+  border-radius: .1rem;
+  margin: .25rem auto .36rem;
+  width: 7.1rem;
+  height: 4.24rem;
+  text-align: center;
+  background-color: #fff;
+  font-size:.28rem;
+  overflow: hidden;
+  p{
+    width: 5.44rem;
+  }
+  .shopping{
+    margin-bottom: .18rem;
+    width: 7.10rem;
+    height: 2.58rem;
+    background: url("/statics/img/pages/2017/holiday2/buy-success.png") center center no-repeat;
+    background-size: 1.63rem 1.63rem;
+    .biaotitle{
+      padding-top: 2.24rem;
+      width: 100%;
+      height: .34rem;
+      font-size: .34rem;
+      text-align: center;
+      color: #ff8f34;
+    }
+  }
+  .shopMon{
+    font-size: 0.26rem;
+    color: #333;
+    width: 7.10rem;
+    height: .44rem;
+    line-height: .44rem;
+    display: flex;
+    display: -webkit-flex;
+    color: #505050;
+      .divMon{
+        width: 3rem;
+        height: .44rem;
+        flex: 1;
+        -webkit-flex: 1;
+
+        .originColor{
+          text-indent: 1.30rem;
+        }
+      }
+    .divMon1{
+        margin-right: 1.35rem;
+        text-align: right;
+    }
+    .divMon2{
+        margin-left: 1.3rem;
+        text-align: left;
+    }
+  }
+}
+.btn{
+  margin: .26rem auto .42rem;
+  width: 7.1rem;
+  height: .9rem;
+  span{
+    display: inline-block;
+    border-radius: .5rem;
+    width: 2.8rem;
+    height: .9rem;
+    line-height: .9rem;
+    color: #fff;
+    font-size: .32rem;
+    text-align: center;
+  }
+  .goUserCenter{
+    background: #ff8f34;
+    float: left;
+    margin-left: .6rem;
+  }
+  .backBtn{
+    background: #ff8f34;
+    float: right;
+    margin-right: .6rem;
+  }
+}
+/*
+礼盒
+*/
+.gift{
+  margin: 0 auto;
+  margin-bottom: .3rem;
+  width: 7.10rem;
+  padding-bottom: .2rem;
+  background: #fff;
+  overflow: hidden;
+  border-radius: .1rem;
+
+  .gift-box{
+    margin-top:.3rem;
+    width: 7.10rem;
+    height: 3.03rem;
+
+    .gift-item{
+      width: 2.35rem;
+      height: 3.03rem;
+      float: left;
+
+      img{
+        margin-left: .52rem;
+        width: 100%;
+        height: 100%；
+      }
+
+      .gift-name{
+        text-align: center;
+        line-height: .58rem;
+        font-size: .26rem;
+        margin-bottom: .02rem;
+      }
+
+      .gift-text{
+        margin: 0 auto;
+        text-align: center;
+        height: .50rem;
+        width: 1.36rem;
+        line-height: .50rem;
+        font-size: .24rem;
+        color: #fff;
+        border-radius: .25rem;
+      }
+    }
+
+    .imgWidth1{
+      width: 1.45rem !important;
+      height: 1.71rem;
+    }
+    .imgWidth2{
+      width: 1.40rem!important;
+      height: 1.53rem;
+      margin-top: .18rem;
+    }
+  }
+  .arrow{
+    width: 6.86rem;
+    height: .21rem;
+    margin: 0 auto;
+    .arrow1{
+      margin-left: 5.35rem;
+      width: 0;
+      height: 0;
+      border-left: .35rem solid transparent;
+      border-right: .35rem solid transparent;
+      border-bottom: .35rem solid #f6f6f6;
+    }
+  }
+  .gift-list{
+    margin: 0 auto;
+    width: 6.6rem;
+    height: 2.64rem;
+    background: #f6f6f6;
+    border-radius: .10rem;
+    color: #787878;
+    p{
+      padding-top: .09rem;
+      height: .86rem;
+      line-height: .86rem;
+      text-align: center;
+      span{
+        color: #ff8f34;
+        font-weight: bold;
+      }
+    }
+
+    .gift-lists{
+      width: 6.86rem;
+      height: 1.69rem;
+      .gift-list-item{
+        width: 2.2rem;
+        text-align: center;
+        height: 1.69rem;
+        float: left;
+
+        .list-img{
+          
+          width: 1.1rem;
+          height: 1.1rem;
+        }
+
+        .gift-name{
+          text-align: center;
+          line-height: .54rem;
+          font-size: .24rem;
+        }
+      }
+    }
+  }
+}
+
+/***layer**/
+.laymshade{
+  background-color: rgba(0, 0, 0,.5);
+}
+.layui-m-layermain .layui-m-layersection .get-gift{
+  width: 5.4rem;
+  height: 5.65rem;
+  background: #fff;
+  border-radius: .20rem;
+  position: relative;
+
+  .layui-m-layercont{
+    padding: 0;
+    .close{
+      right: 0rem;
+      top: -1.14rem;
+      width: 5.4rem;
+      height: 1.94rem;
+      border-radius: .20rem .2rem 0 0;
+      background: transparent url(/statics/img/pages/2017/holiday2/close.png)  1.56rem top no-repeat;
+      background-size: 3.84rem 1.95rem;
+      .close-btn{
+        width: .52rem;
+        height: .52rem;
+        float: right;
+      }
+    }
+    .conYou{
+      margin: 1.1rem 0 .23rem 0;
+      font-size: .46rem;
+      line-height: .46rem;
+      text-align: center;
+      color: #ff6900;
+    }
+    .spanP{
+      margin-bottom: .30rem;
+      line-height: .28rem;
+      font-size: .28rem;
+      text-align: center;
+    }
+    .img-list{
+      width: 4.70rem;
+      height: 1.48rem;
+      padding: 0 .35rem;
+      .img-item{
+        width: 1.52rem;
+        height: 1.48rem;
+        float: left;
+        dt{
+          width: 1.52rem;
+          height: 1.10rem;
+          img{
+            margin-left: .23rem;
+            width: 1.1rem;
+            height: 1.1rem;
+          }
+        }
+        dd{
+          width: 1.52rem;
+          height: .38rem;
+          line-height: .38rem;
+          font-size: .24rem;
+          text-align: center;
+        }
+      }
+    }
+    #address{
+      margin: .40rem auto 0;
+      width: 2.78rem;
+      height: .80rem;
+      line-height: .8rem;
+      font-size: .28rem;
+      color: #fff;
+      border-radius: .40rem;
+      background: #ff6900;
+    }
+  }
+}
+//获取奖品弹框
+.layui-m-layermain .layui-m-layersection .get-gift2{
+  width: 5.4rem;
+  height: 6.74rem;
+  background: #fff;
+  border-radius: .20rem;
+
+  .layui-m-layercont{
+    padding: 0;
+    .close{
+      right: 0rem;
+      top: -1.14rem;
+      width: 5.4rem;
+      height: 1.94rem;
+      border-radius: .20rem;
+      background: transparent url("/statics/img/pages/2017/holiday2/close2.png")  1.56rem top no-repeat;
+      background-size: 3.84rem 1.95rem;
+      .close-btn{
+        width: .52rem;
+        height: .52rem;
+        float: right;
+      }
+    }
+    .conYou{
+      margin-top: .92rem;
+      font-size: .46rem;
+      line-height: .46rem;
+      span{
+        color: #ff6900;
+      }
+    }
+    .spanP{
+      margin:.2rem 0 .40rem 0;
+      line-height: .28rem;
+      font-size: .28rem;
+      span{
+        color: #ff6900;
+      }
+    }
+    img{
+      margin: 0 auto .4rem;
+      width: 2.20rem;
+      height: 2.20rem;
+    }
+    .address{
+      line-height: .3rem;
+      font-size: .24rem;
+      span{
+        font-weight: bold;
+      }
+    }
+    .lay-share{
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: .84rem;
+      line-height: .84rem;
+      color: #fff;
+      font-size: .26rem;
+      border-radius: 0 0 .2rem .2rem;
+      background: #ff8f34 url("/statics/img/pages/2017/holiday2/share2.png")  .58rem .24rem no-repeat;
+      background-size: .36rem .36rem;
+    }
+  }
+}

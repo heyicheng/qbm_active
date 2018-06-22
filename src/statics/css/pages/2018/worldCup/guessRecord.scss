@@ -1,0 +1,126 @@
+@import "../../../common/reset.scss";
+
+body{
+  max-width: 7.5rem;
+  font-size: .14rem;
+  margin: 0 auto;
+  color: #505050;
+  background-color: #de1a24;
+}
+
+.hide{
+	display: none;
+}
+
+.imgBlock{
+  width: 100%;
+  height: auto;
+}
+
+.container{
+  padding: .36rem;
+  .list-box{
+    padding-top: .64rem;
+    .title{
+      top: 0rem;
+			left: 1.27rem;
+			width: 4.25rem;
+			height: 1rem;
+			background: url("/statics/img/pages/2018/worldCup/exchange-coin-record-title.png") top no-repeat;
+			background-size: 4.25rem 1rem;
+
+    }
+    .bd{
+      padding: .48rem;
+      background-color: #3847d5;
+			border: .05rem solid #000;
+			border-radius: .16rem;
+      min-height: 2rem;
+      color: #fff;
+      .tab{
+        height: .54rem;
+        .nav{
+          display: inline-block;
+          width: 1.32rem;
+          text-align: center;
+          font-size: .28rem;
+        }
+        .wait{
+          margin-left: .9rem;
+        }
+        .selected{
+          em{
+            width: 1.32rem;
+            display: inline-block;
+            border-bottom: 1px solid #fff;
+          }
+        }
+      }
+      .list{
+        li{
+          padding: .5rem 0 .3rem 0;
+          border-bottom: 1px solid #000;
+          font-size: .24rem;
+          overflow: hidden;
+          em{
+            color: #ffd21f;
+          }
+          dd{
+            padding-top: .14rem;
+          }
+          .item1{
+            width: 2.6rem;
+            color: #d7daf7;
+            font-size: .24rem;
+          }
+          .item2{
+            width: 2.2rem;
+          }
+        }
+        .nodata{
+          padding: .5rem 0 .3rem 0;
+          font-size: .28rem;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+
+.layui-m-layermain{
+  .layer-tip{
+    background: rgba(0,0,0,.6);
+    font-size: .26rem;
+    width: 5.8rem!important;
+    //height: 7.2rem!important;
+    color: #333;
+    border-radius: .08rem;
+    .layui-m-layercont{
+      padding: .2rem 0;
+    }
+    .layermcont{
+      height: .8rem!important;
+      line-height: .8rem!important;
+    }
+  }
+  .layer-tip-error{
+    background: rgba(0,0,0,.6);
+    font-size: .26rem;
+    width: 5.8rem;
+    height: .8rem;
+    color: #fff;
+    border-radius: .08rem;
+    .layermcont{
+      height: .8rem;
+      line-height: .8rem;
+    }
+  }
+}
+.laymshade{
+  background-color: rgba(0,0,0,.6);
+}
+.layer-tip{
+  background: rgba(0,0,0,0.6);
+  color: #fff !important;
+}

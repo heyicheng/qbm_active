@@ -1,0 +1,30 @@
+
+@import "../../../../common/reset.scss";
+
+body{
+  max-width: 7.5rem;
+  font-size: 14px;
+  margin: 0 auto !important;
+  background-color:#833cd3;
+}
+body * {
+    max-width: 7.5rem;
+}
+
+
+.wrap{
+	padding: .4rem;
+	.rule{
+		background-color: #fff;
+		padding: .3rem;
+		color: #333;
+		border-radius: .2rem;
+		line-height: .3rem;
+		p{
+			padding-bottom: .3rem;
+		}
+		p:last-child{
+			padding: 0;
+		}
+	}
+}

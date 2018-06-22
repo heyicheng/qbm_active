@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" href="/statics/css/pages/2018/market/redPacket/wx.css">
+	<script src="/statics/js/plugins/adaptive.min.js"></script>
+	<script src="/statics/js/common/common.js"></script>
+	<title>谁领大红包</title>
+</head>
+<body class="pos-rel">
+	<div class="wrap" id="pageData">
+		<script id="pageTpl" type="text/html">
+		<div class="bd">
+			<p class="text-center fc-white active-time">活动时间：2月16日—2月21日</p>
+			<ul class="ticket-list">
+				{{if code == -1 || code == 1 || code == 5 || code == 7}}
+				<li>
+					<span class="text-center used" id="redPacketUsed"></span>
+				</li>
+				{{else}}
+					{{if hongbao}}
+					<li>
+						<div class="fn-fl info">
+							<h2>{{hongbao.name}}</h2>
+							<p>有效期：{{hongbao.addtime}} - {{hongbao.vtime}}</p>
+							<p>登录钱保姆APP即可使用</p>
+						</div>
+						<div class="fn-fl text-center price">
+							<p class="num"><em>{{hongbao.money}}</em>元</p>
+							<p class="tip">{{if hongbao.status == 2}}新手已翻倍{{/if}}</p>
+						</div>
+					</li>
+					{{/if}}
+					{{if ticket}}
+					<li>
+						<div class="fn-fl info">
+							<h2>{{ticket.name}}</h2>
+							<p>有效期：{{ticket.addtime}} - {{ticket.vtime}}</p>
+							<p>登录钱保姆APP即可使用</p>
+						</div>
+						<div class="fn-fl text-center price">
+							<p class="num"><em>{{ticket.money}}</em>元</p>
+						</div>
+					</li>
+					{{/if}}
+				{{/if}}
+			</ul>
+			<p class="text-center account hide">红包已放入账号：<span>{{phone}}</span></p>			
+			<div class="text-center hide" id="useBtnBox"><span class="useBtn" id="useBtn">立&nbsp;即&nbsp;使&nbsp;用</span></div>
+		</div>
+		<div class="mt20 fc-white bd">
+			<div class="text-center"><img src="/statics/img/pages/2018/market/redPacket/listTop.png" class="listTop"></div>
+			<ul class="redPacket-list">
+				{{each dataList}}
+				<li>
+					<img src="{{$value.face}}" class="fn-fl avatar">
+					<div class="fn-fr main">
+						<dl class="fn-fl user">
+							<dt>{{$value.nickname}}</dt>
+							<dd>{{$value.receive_time}}</dd>
+						</dl>
+						<dl class="fn-fr money">
+							<dt>{{$value.realMoney}}元</dt>
+							<dd>
+								{{if $value.typeLimit==1}}<span class="big">最大红包</span>{{/if}}
+								{{if $value.typeLimit==2}}<span class="best">最佳手气</span>{{/if}}
+							</dd>
+						</dl>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+			
+			<p class="text-center hide moreRedPacket">我们的红包未完待续···</p>
+
+			<div class="text-center"><img src="/statics/img/pages/2018/market/redPacket/ruleTop.png" class="ruleTop"></div>
+			<div class="rule">
+				<p>1.登录手机客户端首次分享活动页面可分享红包1次，每次完成投资（转让项目、乐享生活圈项目除外）单笔不少于5000元都可分享红包1次，通过投资获得红包分享次数无上限；</p>
+				<p>2.购买完成获得的分享红包活动期间有效，若购买完成时未分享，可前往【我的投资】找到分享红包并分享；</p>
+				<p>3.每个分享红包可领取红包个数为10个，每个账户每天限领取3个红包；</p>
+				<p>4.红包领取后自动发放到钱保姆账户中，可登录钱保姆手机客户端，在【我的券包】中查看；新用户领取红包后请完成注册，前往App Store、应用市场下载并登录钱保姆手机客户端，获得已领取红包的同时，还可额外获得888元红包大礼包；</p>
+				<p>5.红包有效期为3天，请尽快使用；</p>
+				<p>6.如有疑问，详询客服400-006-7066；</p>
+				<p>7.钱保姆保留对本次活动在法律允许范围内的解释。</p>
+			</div>
+		</div>
+		</script>
+	</div>
+	
+	<script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="/statics/js/plugins/sea.js"></script>
+	<script src="/statics/js/plugins/seajs-css.js"></script>
+	<script src="/statics/js/common/sea-config.js"></script>
+	<script>
+		seajs.use("/statics/js/pages/2018/market/redPacket/wx-main.js");
+	</script>
+</body>
+</html>

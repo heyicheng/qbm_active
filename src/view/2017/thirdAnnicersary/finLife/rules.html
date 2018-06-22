@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>活动规则</title>
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" href="/statics/css/pages/2017/thirdAnnicersary/finLife/index.css">
+	<script src="/statics/js/plugins/adaptive.min.js"></script>
+	<script src="/statics/js/common/common.js"></script>
+</head>
+
+<body>
+	<div class="rulesContent">
+		<title>精选好券 限量领取</title>
+		<p>1、活动时间：11月1日-11月3日；</p>
+		<p>2、每天11:00,14:00,16:00三个整点，精选好券限时抢，抢完为止；同一张券同一个账户在同一时段仅可领取1张；同一张券每个账户在活动期间最多可取3张；</p>
+		<p>3、生活券有效使用时间： 11月10日-11月12日；</p>
+		<p>4、活动期间存钱理财领取除爆款外的任一商品，即可获得赠品皇冠害羞暴力熊车载香薰一个，每个账户最多可获得一个；赠品将在活动结束后10个工作日内统一发货；</p>
+		<p>5、理财生活圈商品采购自线下品牌商家，由钱保姆提供，与设备生产商Apple Inc.无关；</p>
+		<p>6、钱保姆保留对本次活动在法律允许范围内的解释权。</p>
+		<title>限时狂欢，购畅快</title>
+		<p>1、活动时间：11月10日-11月12日；</p>
+		<p>2、活动商品限时狂欢，用更少的投资额就能领走最心仪的商品；</p>
+		<p>3、因理财生活圈区别于一般电商购物平台，在理财生活圈中领取的每个商品均与理财项目挂钩，故商品不能提供退货服务，钱粉们在购买理财项目前请选择好自己想要的商品及型号；</p>
+		<p>4、所领取商品将在订单支付后的10个工作日内发货；若遇商品暂时缺货或者其他问题，钱保姆客服将及时与您沟通处理；</p>
+		<p>5、理财生活圈商品采购自线下品牌商家，由钱保姆提供，与设备生产商Apple Inc.无关；</p>
+		<p>6、钱保姆保留对本次活动在法律允许范围内的解释权。</p>
+	</div>
+</body>
+<script>
+window.onload = function() {
+	function connectWebViewJavascriptBridge(callback) { //判断APP是否支持WebViewJavascriptBridge
+		if (window.WebViewJavascriptBridge) {
+			callback(WebViewJavascriptBridge)
+		} else {
+			document.addEventListener('WebViewJavascriptBridgeReady', function() {
+				callback(WebViewJavascriptBridge)
+			}, false)
+		}
+	}
+	connectWebViewJavascriptBridge(function(bridge) {
+
+		//加载页面后调用
+		bridge.init(function(message, responseCallback) {
+			var data = { 'Javascript Responds': 'Wee!' }
+			responseCallback(data);
+		});
+
+		bridge.registerHandler('goBackBtnHandler', function(data, responseCallback) {
+			var backLink =  webUrl + "/view/2017/thirdAnnicersary/finLife/index.html?interaction=1&userId=" + getUrlParam('userId');
+			var responseData = { 'title': "惊喜三重奏，生活“购”畅快", 'href': backLink, 'icon': 1, 'backBtn': 0 };
+			responseCallback(responseData);
+			if (typeof data == "string") data = JSON.parse(data);
+			if (data.result) location.href = backLink;
+		});
+	});
+}
+</script>
+
+</html>

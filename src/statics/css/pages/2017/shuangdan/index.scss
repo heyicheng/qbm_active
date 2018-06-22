@@ -1,0 +1,423 @@
+@import "../../../common/reset.scss";
+body {
+	background: url(/statics/img/pages/2017/shuangdan/redBg.jpg);
+	background-size: 100% auto;
+	font-size: 14px;
+	margin: 0;
+}
+
+@keyframes chuizi {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(54%, -15%);
+	}
+	60% {
+		transform: rotate(-45deg) translate(54%, -15%);
+	}
+	100% {
+		transform: rotate(15deg) translate(54%, -15%);
+	}
+}
+
+@-webkit-keyframes chuizi {
+	0% {
+		-webkit-transform: translate(0, 0);
+	}
+	50% {
+		-webkit-transform: translate(54%, -13%);
+	}
+	60% {
+		-webkit-transform: rotate(-45deg) translate(54%, -15%);
+	}
+	100% {
+		-webkit-transform: rotate(15deg) translate(54%, -15%);
+	}
+}
+
+.chuiAnimation {
+	-webkit-animation: chuizi 1s forwards;
+	animation: chuizi 1s forwards;
+}
+
+.container {
+	position: relative;
+	max-width: 7.5rem;
+	width: 100%;
+	.top {
+		position: relative;
+		width: 100%;
+		height: 10.6rem;
+		background: url(/statics/img/pages/2017/shuangdan/top.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+	}
+}
+
+.rules {
+	position: absolute;
+	top: 0.6rem;
+	right: 0.1rem;
+	width: 1.78rem;
+	height: 0.74rem;
+	background: url(/statics/img/pages/2017/shuangdan/rules.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+}
+
+.danBox {
+	position: absolute;
+	top: 4.46rem;
+	left: 0;
+	width: 7.5rem;
+	height: 4.66rem;
+	overflow: hidden;
+	audio {
+		display: none;
+		// position: absolute;
+		// top: -10rem;
+		// left: 0;
+	}
+	.dan {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -1.45rem;
+		width: 2.9rem;
+		height: 3.58rem;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+		._text {
+			position: absolute;
+			top: 1.8rem;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			color: #e35600;
+			font-size: 0.28rem;
+			font-weight: bold;
+			text-shadow: 0 1px 0px rgba(255, 255, 255, 0.43);
+		}
+	}
+	.chui {
+		position: absolute;
+		top: 0.54rem;
+		left: 0.76rem;
+		z-index: 99;
+		width: 1.7rem;
+		height: 1.96rem;
+	}
+	.dansui {
+		display: none;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -1.45rem;
+		width: 2.9rem;
+		height: 3.58rem;
+	}
+	._pop {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 1.36rem;
+		right: 0.44rem;
+		width: 2.06rem;
+		height: 0.7rem;
+		padding-left: 0.3rem;
+		background: url(/statics/img/pages/2017/shuangdan/pop.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+		color: #65daa8;
+		font-size: 0.24rem;
+	}
+}
+
+.myMoney {
+	position: absolute;
+	top: 9.2rem;
+	left: 50%;
+	margin-left: -1.5rem;
+	width: 3rem;
+	height: 0.7rem;
+	color: #ffe2ef;
+	font-size: 0.24rem;
+	p {
+		line-height: 0.7rem;
+		text-align: center;
+		span {
+			display: inline-block;
+			width: 1.3rem;
+			line-height: 0.8rem;
+			padding: 0 0.18rem;
+			text-align: right;
+		}
+	}
+}
+
+.prizetitle {
+	width: 7.5rem;
+	margin: 0.3rem 0;
+	text-align: center;
+	img {
+		display: inline-block;
+		width: 3.4rem;
+	}
+}
+
+.prizeList {
+	width: 7.5rem;
+	padding: 0 0.3rem;
+	margin-bottom: 0.3rem;
+	overflow-x: auto;
+	ul {
+		width: 20.4rem;
+		._prize {
+			float: left;
+			width: 1.98rem;
+			._imgbox {
+				width: 1.98rem;
+				height: 1.98rem;
+				background: url(/statics/img/pages/2017/shuangdan/prizeBg1.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				background-position: top;
+				text-align: center;
+				line-height: 1.8rem;
+				img {
+					display: inline-block;
+					width: 1.4rem;
+					height: 1.4rem;
+				}
+			}
+			.jin {
+				position: relative;
+				background: url(/statics/img/pages/2017/shuangdan/prizeBg2.png)!important;
+				background-repeat: no-repeat!important;
+				background-size: 100% 100%!important;
+				background-position: top!important;
+				span {
+					position: absolute;
+					top: 0.1rem;
+					left: -0.06rem;
+					width: 0.9rem;
+					height: 0.44rem;
+					transform: rotate(-45deg);
+					text-align: center;
+					font-size: 0.22rem;
+					color: #fff;
+					line-height: 0.44rem;
+				}
+			}
+			._text {
+				width: 1.98rem;
+				font-size: 0.24rem;
+				text-align: center;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.exchangeTop {
+	width: 7.5rem;
+	height: 1.64rem;
+	background: url(/statics/img/pages/2017/shuangdan/exchangeTop.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+}
+
+.exchangeBox {
+	position: relative;
+	width: 7.1rem;
+	height: 8rem;
+	margin: 0 auto;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		li {
+			float: left;
+			width: 1.6rem;
+			text-align: center;
+			img {
+				width: 1.6rem;
+				height: 2.2rem;
+			}
+			p {
+				width: 100%;
+				height: 2.86rem;
+				padding-top: 0.2rem;
+				span {
+					display: block;
+					width: 100%;
+					line-height: 1.66rem;
+					text-align: center;
+					color: #ad4d8c;
+					img {
+						display: inline-block;
+						width: 1.6rem;
+						height: 2.2rem;
+					}
+				}
+				i {
+					display: block;
+					width: 100%;
+					margin: 0.14rem 0;
+					color: #fff;
+					font-size: 0.22rem;
+				}
+			}
+			button {
+				width: 1.4rem;
+				height: 0.88rem;
+				background: url(/statics/img/pages/2017/shuangdan/exchangeBtn.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: top;
+				border: none;
+				outline: none;
+			}
+		}
+	}
+}
+
+.btnBox {
+	width: 7.5rem;
+	height: 1.4rem;
+	margin: 0 auto;
+	background: url(/statics/img/pages/2017/shuangdan/bottom.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+	text-align: center;
+	line-height: 1.4rem;
+	button {
+		width: 2.45rem;
+		height: 0.7rem;
+		border: none;
+		background: url(/statics/img/pages/2017/shuangdan/prizeBtn.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+		outline: none;
+	}
+}
+
+.successPop {
+	width: 5.4rem!important;
+	.layui-m-layercont {
+		padding: 0 0.6rem;
+		.title {
+			margin-top: 1rem;
+			color: #df2e1d;
+			font-size: 0.48rem;
+		}
+		.icon {
+			position: absolute;
+			top: -0.66rem;
+			left: 50%;
+			width: 2.28rem;
+			height: 1.52rem;
+			margin-left: -1.14rem;
+		}
+		p {
+			font-size: 0.28rem!important;
+			margin: 0.3rem 0;
+		}
+		._imgBox {
+			width: 100%;
+			img {
+				width: 2.0rem;
+			}
+		}
+	}
+	.layui-m-layerbtn {
+		height: 0.8rem;
+		margin-top: 0.54rem;
+		margin-bottom: 0.3rem;
+		background: none;
+		border: none;
+		span[yes] {
+			display: block;
+			width: 3.06rem!important;
+			height: 1.08rem!important;
+			margin: 0 auto;
+			background: url(/statics/img/pages/2017/shuangdan/btnBg.png);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: top;
+			color: #fff;
+			font-size: 0.3rem;
+			line-height: 0.9rem;
+		}
+	}
+}
+
+.fail {
+	.layui-m-layercont {
+		.icon {
+			width: 1.52rem;
+			margin-left: -0.76rem;
+		}
+		.title {
+			margin-top: 1rem;
+			color: #313131;
+			font-size: 0.42rem;
+		}
+	}
+}
+
+
+.finBox {
+	border-bottom: 1px solid #e5e5e5;
+	.item {
+		height: 0.8rem;
+		margin: 0.3rem 0;
+		font-size: 0.28rem;
+		line-height: 0.8rem;
+		input[type='number'] {
+			box-sizing: border-box;
+			width: 3.26rem;
+			height: 0.8rem;
+			border: 0.04rem solid #e5e5e5;
+			border-radius: 0.8rem;
+			margin: 0 0.1rem;
+			padding: 0 0.3rem;
+			outline: none;
+			background: none;
+		}
+		&:nth-child(2) {
+			input[type='radio'] {
+				display: inline-block;
+				margin: 0 0.3rem;
+			}
+		}
+	}
+}
+
+.getDou {
+	height: 1.1rem;
+	line-height: 1.1rem;
+	border-bottom: 1px solid #e5e5e5;
+	overflow: hidden;
+	label {
+		float: left;
+	}
+	span {
+		float: right;
+		padding-right: 0.3rem;
+		i {
+			padding-right: 0.16rem;
+			font-size: 0.48rem;
+			color: #cd2f2f;
+		}
+	}
+}
+

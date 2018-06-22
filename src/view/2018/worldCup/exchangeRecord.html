@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" href="/statics/css/common/reset.css">
+	<link rel="stylesheet" href="/statics/css/pages/2018/worldCup/exchangeRecord.css">
+	<script src="/statics/js/plugins/adaptive.min.js"></script>
+	<script src="/statics/js/common/common.js"></script>
+	<title>兑换记录</title>
+</head>
+<body>
+  <div class="container clearfix">
+    <div class="pos-rel exchange-record">
+      <span class="pos-abs title"></span>
+      <ul class="bd" id="exchangeRecordList">
+        <script id="exchangeRecordListTpl" type="text/html">
+        <li class="head">
+          <span class="fn-fl time">时间</span>
+          <span class="fn-fl prize">兑换奖品</span>
+          <span class="fn-fr coin">竞猜币</span>
+        </li>
+        {{each dataList}}
+        <li>
+          <span class="fn-fl time">{{$value.addtime}}</span>
+          <span class="fn-fl prize">{{$value.detail}}</span>
+          <span class="fn-fr coin">-{{$value.exchangePrice}}枚</span>
+        </li>
+        {{/each}}
+        </script>
+      </ul>
+    </div>
+  </div>
+	<script src="/statics/js/plugins/sea.js"></script>
+	<script src="/statics/js/plugins/seajs-css.js"></script>
+	<script src="/statics/js/common/sea-config.js"></script>
+	<script>
+		seajs.use("/statics/js/pages/2018/worldCup/exchangeRecord.js");
+	</script>
+</body>
+
+</html>

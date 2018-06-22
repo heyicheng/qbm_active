@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" href="/statics/css/common/reset.css">
+	<link rel="stylesheet" href="/statics/css/pages/2018/market/app.css">
+	<script src="/statics/js/plugins/adaptive.min.js"></script>
+	<script src="/statics/js/common/common.js"></script>
+	<title>钱保姆APP下载</title>
+</head>
+<body>
+<!-- <a href="itms-services://?action=download-manifest&url=https://down.qbm360.com/App/manifest.plist">Install APP</a> -->
+<div class="wrap">
+	<img src="/statics/img/pages/2018/market/app/wx-tip.png" class="wx-tip blockImg hide">
+	<img src="/statics/img/pages/2018/market/app/intro1.png" class="blockImg">
+	<img src="/statics/img/pages/2018/market/app/intro2.png" class="blockImg">
+</div>
+<script src="/statics/js/plugins/jquery-3.2.1.min.js"></script>
+<script language='javascript'>
+	//判断手机系统
+	var phoneSystem = "";
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+      phoneSystem = "ios";
+    }else if (/(Android)/i.test(navigator.userAgent)) {
+      phoneSystem = "Android";
+    }else{
+      phoneSystem = "other";
+    }
+
+    if (phoneSystem = "ios"){
+    	var ua = navigator.userAgent.toLowerCase();
+    	//如果是微信或QQ内置浏览器
+    	if(ua.match(/MicroMessenger/i) == "micromessenger" || / QQ/i.test(navigator.userAgent)) {
+        	$(".wx-tip").removeClass('hide');
+      	}else{
+      		document.location = 'itms-services://?action=download-manifest&url=https://down.qbm360.com/App/manifest.plist';
+      	}
+    }
+
+</script>  
+</body>
+</html>

@@ -1,0 +1,399 @@
+
+body{
+  font-size: 14px;
+  max-width: 7.5rem;
+  margin: 0 auto !important;
+  background: #f4f4f4;
+  color: #505050;
+}
+.box-shadow{
+  box-shadow:0 0 .2rem #d0d0d0;
+}
+.hide{
+  display: none;
+}
+.btn-start{//活动开始 有抽奖次数 ---领取奖品按钮
+  background: #ff8f34;
+  color: #fff;
+}
+.btn-start-disabled{//活动开始 无抽奖次数 ---领取奖品按钮
+  background: #b9b9b9;
+  color: #fff;
+  pointer-events: none;
+}
+.btn-yugao{//活动未开始 ---查看奖品
+  background: #fff;
+  border: 1px solid #ff8f34;
+  color: #ff8f34;
+}
+img{
+  display: block;
+}
+
+//转盘区域
+.turntable-bg{
+  width: 7.1rem;
+  height: 8.2rem !important;
+  background: #fff;
+  margin: 0.2rem auto 0;
+  overflow: hidden;
+}
+.exchange{
+  margin: 0.4rem 0 0 0;
+  width: 7.1rem;
+  height: 1.3rem;
+  background: url(/statics/img/pages/2017/holiday2/exchange.png) top center no-repeat;
+  background-size: 80%;
+}
+.noStart{
+  margin: .3rem auto 0;
+  width: 6.7rem;
+  height: 4.22rem;
+  background: url(/statics/img/pages/2017/holiday2/noStart.png) top center no-repeat;
+  background-size: 100%;
+}
+.blank-prizes{
+  text-align: center;
+  img{
+    margin-top: 1.06rem;
+    width: 3.52rem;
+  }
+}
+/**************************礼盒******************************/
+.gift{
+  margin: 0 auto;
+  width: 7.10rem;
+  height: 7.20rem;
+  background: #fff;
+  overflow: hidden;
+
+  .gift-box{
+    margin-top:.3rem;
+    width: 7.10rem;
+    height: 3.03rem;
+
+    .gift-item{
+      width: 2.35rem;
+      height: 3.03rem;
+      float: left;
+
+      img{
+        margin-left: .52rem;
+        width: 100%;
+        height: 100%；
+      }
+
+      .gift-name{
+        text-align: center;
+        line-height: .58rem;
+        font-size: .26rem;
+        margin-bottom: .02rem;
+      }
+
+      .gift-text{
+        margin: 0 auto;
+        text-align: center;
+        height: .50rem;
+        width: 1.36rem;
+        line-height: .50rem;
+        font-size: .24rem;
+        color: #fff;
+        border-radius: .25rem;
+      }
+    }
+
+    .imgWidth1{
+      width: 1.45rem !important;
+      height: 1.71rem;
+    }
+    .imgWidth2{
+      width: 1.40rem!important;
+      height: 1.53rem;
+      margin-top: .18rem;
+    }
+  }
+  .arrow{
+    width: 6.86rem;
+    height: .21rem;
+    margin: 0 auto;
+    .arrow1{
+      margin-left: 5.35rem;
+      width: 0;
+      height: 0;
+      border-left: .35rem solid transparent;
+      border-right: .35rem solid transparent;
+      border-bottom: .35rem solid #fff4ee;
+    }
+  }
+  .gift-list{
+    margin: 0 auto;
+    width: 6.86rem;
+    height: 2.64rem;
+    background: #fff4ee;
+    border-radius: .10rem;
+
+    p{
+      padding-top: .09rem;
+      height: .86rem;
+      line-height: .86rem;
+      text-align: center;
+      span{
+        color: #ff8f34;
+        font-weight: bold;
+      }
+    }
+
+    .gift-lists{
+      width: 6.86rem;
+      height: 1.69rem;
+      .gift-list-item{
+        width: 2.25rem;
+        height: 1.69rem;
+        text-align: center;
+        float: left;
+
+        .list-img{
+          margin: 0 auto;
+          width: auto;
+          height: .94rem;
+        }
+
+        .gift-name{
+          text-align: center;
+          line-height: .54rem;
+          font-size: .24rem;
+        }
+      }
+    }
+  }
+}
+
+// 已抽中奖品
+.listH1{
+  padding-top: 0.4rem;
+  color: #000;
+  width: 7.1rem;
+  height: .32rem;
+  line-height: .36rem;
+  font-size: .36rem;
+  background: url(/statics/img/pages/2017/holiday2/h1bg.png) top center no-repeat;
+  background-size: 100%;
+}
+//获得的奖品
+.winning-list{
+  margin: .5rem auto .5rem;
+  width: 7.1rem;
+  height: 3.82rem;
+  background-color: #fff;
+  border-radius: .1rem;
+  color: #787878;
+  .winner-list-title{
+    margin: 0 auto;
+    padding-bottom: .18rem;
+    width: 6.32rem;
+    height: .6rem;
+    line-height: .32rem;
+    font-size: .24rem;
+    border-bottom: 1px solid #d1d0d0;
+    span{
+      margin-top: .28rem;
+      display: inline-block;
+      width: 49%;
+      text-align: center;
+    }
+  }
+  .swiper-container{
+    margin: 0 auto;
+    width: 6.32rem;
+    height: 2.38rem;
+    overflow-y: hidden;
+    .winner-list-detail{
+      span{
+        display: inline-block;
+        width: 49%;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        color:#646464;
+        font-size: .22rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.mark{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 999;
+}
+//小圆点
+.icon{
+  display: block;
+  width: .12rem;
+  height: .12rem;
+  background: url(/statics/img/pages/2017/holiday2/icon.png) top center no-repeat;
+  background-size: 100%;
+}
+.icon1{
+  left: 0.1rem;
+  top: 0.1rem;
+}
+.icon2{
+  right: 0.1rem;
+  top: 0.1rem;
+}
+.icon3{
+  bottom: 0.1rem;
+  left: 0.1rem;
+}
+.icon4{
+  bottom: 0.1rem;
+  right: 0.1rem;
+}
+/*****************************领取奖品********************************/
+.laymshade{
+  background-color: rgba(0, 0, 0,.5);
+}
+.layui-m-layermain .layui-m-layersection .get-gift{
+  width: 5.4rem;
+  height: 5.65rem;
+  background: #fff;
+  border-radius: .20rem;
+  position: relative;
+
+  .layui-m-layercont{
+    padding: 0;
+    .close{
+      right: 0rem;
+      top: -1.14rem;
+      width: 5.4rem;
+      height: 1.94rem;
+      border-radius: .20rem .2rem 0 0;
+      background: transparent url(/statics/img/pages/2017/holiday2/close.png)  1.56rem top no-repeat;
+      background-size: 3.84rem 1.95rem;
+      .close-btn{
+        width: .52rem;
+        height: .52rem;
+        float: right;
+      }
+    }
+    .conYou{
+      margin: 1.1rem 0 .23rem 0;
+      font-size: .46rem;
+      line-height: .46rem;
+      text-align: center;
+      color: #ff6900;
+    }
+    .spanP{
+      margin-bottom: .30rem;
+      line-height: .28rem;
+      font-size: .28rem;
+      text-align: center;
+    }
+    .img-list{
+      width: 4.70rem;
+      height: 1.48rem;
+      padding: 0 .35rem;
+      .img-item{
+        width: 1.52rem;
+        height: 1.48rem;
+        float: left;
+        dt{
+          width: 1.52rem;
+          height: 1.10rem;
+          img{
+            margin-left: .23rem;
+            width: 1.1rem;
+            height: 1.1rem;
+          }
+        }
+        dd{
+          width: 1.52rem;
+          height: .38rem;
+          line-height: .38rem;
+          font-size: .24rem;
+          text-align: center;
+        }
+      }
+    }
+    #address{
+      margin: .40rem auto 0;
+      width: 2.78rem;
+      height: .80rem;
+      line-height: .8rem;
+      font-size: .28rem;
+      color: #fff;
+      border-radius: .40rem;
+      background: #ff6900;
+    }
+  }
+}
+
+//获取奖品弹框
+.layui-m-layermain .layui-m-layersection .get-gift2{
+  width: 5.4rem;
+  height: 6.74rem;
+  background: #fff;
+  border-radius: .20rem;
+
+  .layui-m-layercont{
+    padding: 0;
+    .close{
+      right: 0rem;
+      top: -1.14rem;
+      width: 5.4rem;
+      height: 1.94rem;
+      border-radius: .20rem;
+      background: transparent url("/statics/img/pages/2017/holiday2/close2.png")  1.56rem top no-repeat;
+      background-size: 3.84rem 1.95rem;
+      .close-btn{
+        width: .52rem;
+        height: .52rem;
+        float: right;
+      }
+    }
+    .conYou{
+      margin-top: .92rem;
+      font-size: .46rem;
+      line-height: .46rem;
+      span{
+        color: #ff6900;
+      }
+    }
+    .spanP{
+      margin:.2rem 0 .40rem 0;
+      line-height: .28rem;
+      font-size: .28rem;
+      span{
+        color: #ff6900;
+      }
+    }
+    img{
+      margin: 0 auto .4rem;
+      width: 2.20rem;
+      height: 2.20rem;
+    }
+    .address{
+      line-height: .3rem;
+      font-size: .24rem;
+      span{
+        font-weight: bold;
+      }
+    }
+    .lay-share{
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: .84rem;
+      line-height: .84rem;
+      color: #fff;
+      font-size: .26rem;
+      border-radius: 0 0 .2rem .2rem;
+      background: #ff8f34 url("/statics/img/pages/2017/holiday2/share2.png")  .58rem .24rem no-repeat;
+      background-size: .36rem .36rem;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import "../../../common/reset.scss";
+body {
+	background: #58473b;
+	font-size: 14px;
+	margin: 0;
+	width: 7.5rem;
+	height: 12.05rem;
+	overflow: hidden;
+}
+
+.container {
+	position: relative;
+	max-width: 7.5rem;
+	width: 100%;
+	margin: 0 auto;
+	background: url(/statics/img/pages/2018/vipEquities/explain/bg.png) no-repeat;
+	background-size: 100% 12.05rem;
+	background-position: top;
+	.top {
+		width: 7.5rem;
+		height: 3.96rem;
+		padding: 0.72rem;
+		text-align: center;
+		img {
+			display: none;
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+	}
+	.content {
+		width: 6.9rem;
+		height: 8.1rem;
+		padding: 0.4rem 0.3rem;
+		margin: 0 auto;
+		background: #fff;
+		border-radius: 0.1rem;
+		line-height: 1.5em;
+		&>div {
+			display: none;
+			width: 100%;
+			img {
+				width: 100%;
+				margin-top: 0.3rem;
+			}
+		}
+		.qfh {
+			.imgBox {
+				width: 100%;
+				overflow: hidden;
+				img {
+					float: left;
+					width: 3.06rem;
+					height: 2.1rem;
+				}
+				img:nth-child(2n) {
+					float: right;
+				}
+			}
+		}
+		a {
+			display: inline-block;
+			width: 100%;
+			margin-top: 1rem;
+			text-align: center;
+			color: #58473b;
+			text-decoration: underline;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			-webkit-tap-highlight-color: transparent;
+			outline: none;
+		}
+	}
+}

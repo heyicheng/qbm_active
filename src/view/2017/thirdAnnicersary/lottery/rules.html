@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>活动规则</title>
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" href="/statics/css/pages/2017/thirdAnnicersary/lottery/index.css">
+	<script src="/statics/js/plugins/adaptive.min.js"></script>
+	<script src="/statics/js/common/common.js"></script>
+</head>
+
+<body>
+	<div class="content">
+		<div class="box">
+			<p>1.活动时间：2017年11月13日-2017年11月30日；</p>
+			<p>2.每天通过分享活动页面至朋友圈可获得5钱豆，投资越多钱豆越多；</p>
+			<p>3.iPhone X限兑换1次，其他实物奖品限3次，生活券和红包不限兑换次数；</p>
+			<p>4.活动期间购买标的不可转让，转让标、假日宝和理财生活圈不参与本活动；</p>
+			<p>5.实物奖品将在活动结束后20个工作日内发放，获奖者请及时填写收货地址等相关信息，自活动结束后3日内无法取得联系视为自动放弃；</p>
+			<p>6.本活动采用最新实时数据监控系统，如发现任何恶意刷奖行为，将在48小时内予以警告，若系统再次检测到恶意刷奖行为将自动取消活动资格及奖励；</p>
+			<p>7.本活动所有奖品由钱保姆提供，与设备生产商Apple Inc.无关；</p>
+			<p>8.钱保姆保留对本次活动在法律允许范围内的解释。</p>
+		</div>
+		<div class="tip">*钱保姆保留对本次活动在法律允许范围内的解释权</div>
+	</div>
+</body>
+<script>
+window.onload = function() {
+	function connectWebViewJavascriptBridge(callback) { //判断APP是否支持WebViewJavascriptBridge
+		if (window.WebViewJavascriptBridge) {
+			callback(WebViewJavascriptBridge)
+		} else {
+			document.addEventListener('WebViewJavascriptBridgeReady', function() {
+				callback(WebViewJavascriptBridge)
+			}, false)
+		}
+	}
+	connectWebViewJavascriptBridge(function(bridge) {
+
+		//加载页面后调用
+		bridge.init(function(message, responseCallback) {
+			var data = { 'Javascript Responds': 'Wee!' }
+			responseCallback(data);
+		});
+
+		bridge.registerHandler('goBackBtnHandler', function(data, responseCallback) {
+			var backLink = webUrl + "/view/2017/thirdAnnicersary/lottery/index.html?interaction=1&userId=" + getUrlParam('userId');
+			var responseData = { 'title': "投资赢iPhone，抽兑随心意", 'href': backLink, 'icon': 2, 'backBtn': 0};
+			responseCallback(responseData);
+			if (typeof data == "string") data = JSON.parse(data);
+			if (data.result) location.href = backLink;
+		});
+	});
+}
+</script>
+
+</html>

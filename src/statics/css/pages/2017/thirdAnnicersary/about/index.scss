@@ -1,0 +1,266 @@
+@import "../../../../common/reset.scss";
+body{
+	background: #c63eea;
+	font-size: 14px;
+	margin: 0;
+}
+
+.container {
+	position: relative;
+	max-width: 7.5rem;
+	width: 100%;
+	background-size: 100% 100%;
+	margin-bottom: 0.3rem;
+	._top {
+		position: relative;
+		width: 100%;
+		height: 8.16rem;
+		background: url(/statics/img/pages/2017/thirdAnnicersary/about/aboutTop.png) 100% no-repeat;
+		background-size: 100% 100%;
+		._explain {
+			position: absolute;
+			top: 5.64rem;
+			left: 0.75rem;
+			width: 6.0rem;
+			text-indent: 0.48rem;
+			color: #fff;
+		}
+	}
+
+}
+._videoBox {
+	position: relative;
+	width: 6.74rem;
+	height: 11.4rem;
+	margin: 0 auto;
+	margin-top: -0.28rem;
+	background: url(/statics/img/pages/2017/thirdAnnicersary/about/content1.png) 100% no-repeat;
+	background-size: 100% 100%;
+	.tabBox {
+		position: absolute;
+		top: 1.0rem;
+		left: 0.4rem;
+		width: 4.2rem;
+		height: 0.88rem;
+		overflow: hidden;
+		.tab {
+			float: left;
+			width: 2.0rem;
+			height: 0.8rem;
+			font-size: 0.3rem;
+			line-height: 0.8rem;
+			color: #fff;
+			text-align: center;
+			border-radius: 0.08rem 0.08rem 0 0;
+			&:nth-child(1) {
+				margin-right: 0.12rem;
+				background: -webkit-linear-gradient(#f3c5ff, #aa3bff);
+				background: linear-gradient(#f3c5ff, #aa3bff);
+				box-shadow:0.05rem 0.05rem #9023e2;
+			}
+			&:nth-child(2) {
+				background: -webkit-linear-gradient(#f3c5ff, #5256ff);
+				background: linear-gradient(#f3c5ff, #5256ff);
+				box-shadow:0.05rem 0.05rem #9023e2;
+			}
+		}
+	}
+	.videos {
+		position: absolute;
+		top: 1.8rem;
+		left: 0.4rem;
+		width: 5.92rem;
+		height: 3.2rem;
+		padding: 0.1rem;
+		.video {
+			width: 100%;
+			height: 100%;
+			border-radius: 0.08rem;
+			background: #fff;
+			&:nth-child(2){
+				display: none;
+			}
+		}
+	}
+	.video1{
+		background: #aa3bff;
+		box-shadow:0.08rem 0.08rem #9023e2;
+		border-radius: 0 0.08rem 0.08rem 0.08rem;
+	}
+	.video2{
+		background: #5658ff;
+		box-shadow:0.08rem 0.08rem #4437bd;
+		border-radius: 0 0.08rem 0.08rem 0.08rem;
+	}
+}
+._eventBox {
+	position: relative;
+	width: 6.74rem;
+	height: 8.06rem;
+	margin: 0 auto;
+	margin-top: -0.36rem;
+	background: url(/statics/img/pages/2017/thirdAnnicersary/about/content2.png) 100% no-repeat;
+	background-size: 100% 100%;
+	.tabBox {
+		display: flex;
+		position: absolute;
+		top: 1.66rem;
+		left: 0.18rem;
+		width: 6.36rem;
+		height: 0.72rem;
+		.tab {
+			width: 25%;
+			font-size: 0.3rem;
+			color: #f6d4ff;
+			text-align: center;
+			border-radius: 0.08rem 0.08rem 0 0;
+			padding-top: 0.12rem;
+			span {
+				display: inline-block;
+				height: 0.5rem;
+				line-height: 0.5rem;
+			}
+		}
+		.active {
+			color: #9e4ebc;
+			background: #f6d4ff;
+			span{
+				border-bottom: 2px solid #9e4ebc;
+			}
+		}
+	}
+	.events {
+		position: absolute;
+		top: 2.28rem;
+		left: 0.18rem;
+		width: 6.36rem;
+		height: 5.06rem;
+		padding: 0.4rem;
+		background: #f6d4ff;
+		border-radius: 0.08rem;
+		overflow: scroll;
+		&::-webkit-scrollbar {
+			display:none;
+		}
+		-webkit-overflow-scrolling: touch;
+		p {
+			margin-bottom: 0.1rem;
+			overflow: hidden;
+			.month {
+				float: left;
+				width: 0.72rem;
+				color: #9e4ebc;
+			}
+			.event {
+				float: right;
+				width: 4.8rem;
+				color: #3d3d3d;
+				margin-bottom: 0.1rem;
+			}
+		}
+	}
+}
+._imgBox {
+	position: relative;
+	width: 6.74rem;
+	height: 7.70rem;
+	margin: 0 auto;
+	margin-top: -0.36rem;
+	background: url(/statics/img/pages/2017/thirdAnnicersary/about/content3.png) 100% no-repeat;
+	background-size: 100% 100%;
+	.imgs {
+		position: absolute;
+		top: 1.68rem;
+		left: 0.18rem;
+		width: 6.36rem;
+		height: 4.28rem;
+		border-radius: 0.08rem;
+		background: #f3c6ff;
+		padding: 0.1rem;
+	}
+}
+._newsBox {
+	position: relative;
+	width: 6.74rem;
+	height: 6.32rem;
+	margin: 0 auto;
+	margin-top: -0.36rem;
+	background: url(/statics/img/pages/2017/thirdAnnicersary/about/content4.png) 100% no-repeat;
+	background-size: 100% 100%;
+	.news {
+		position: absolute;
+		top: 1.56rem;
+		left: 0.18rem;
+		width: 6.36rem;
+		height: 4.28rem;
+		border-radius: 0.08rem;
+		background: #f3c6ff;
+		padding: 0.4rem;
+		overflow: scroll;
+		&::-webkit-scrollbar {
+			display:none;
+		}
+		-webkit-overflow-scrolling: touch;
+		.item {
+			font-size: 0.24rem;
+			padding: 0.14rem 0;
+			color: #3c3c3c;
+		}
+		.bbs {
+			font-size: 0.24rem;
+			padding: 0.14rem 0;
+			color: #3c3c3c;
+		}
+	}
+}
+._finLife {
+	position: relative;
+	width: 6.74rem;
+	height: 3.30rem;
+	margin: 0 auto;
+	margin-top: -0.36rem;
+	margin-bottom: 0.3rem;
+	background: url(/statics/img/pages/2017/thirdAnnicersary/about/finLife.png) 100% no-repeat;
+	background-size: 100% 100%;
+	._btn {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 2.4rem;
+	}
+}
+
+.swiper-container {
+	position: relative;
+	width: 100%;
+	height: 5.5rem;
+	.swiper-slide {
+		position: relative;
+		width: 100%;
+		height: 4.08rem;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	p{
+		position: absolute;
+		top: 4.66rem;
+		left: 0.28rem;
+		width: 5.6rem;
+		color: #fff;
+	}
+	&>.swiper-pagination {
+		top: 4.32rem;
+	}
+	.swiper-pagination-bullet {
+		width: 0.1rem;
+		height: 0.1rem;
+		background: #f3c6ff;
+		opacity: 1;
+		border-radius: 50%;
+	}
+	.swiper-pagination-bullet-active{
+		background: #a22dc2;
+	}
+}  

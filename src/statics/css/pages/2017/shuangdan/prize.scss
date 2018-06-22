@@ -1,0 +1,72 @@
+@import "../../../common/reset.scss";
+body {
+	background: url(/statics/img/pages/2017/shuangdan/redBg.jpg);
+	background-size: 100% auto;
+	font-size: 14px;
+	margin: 0;
+}
+
+.container {
+	position: relative;
+	max-width: 7.5rem;
+	width: 100%;
+}
+
+.content {
+	width: 100%;
+	height: 100vh;
+	padding: 0 0.3rem;
+	font-size: 0.24rem;
+	overflow-y: auto;
+	.box {
+		width: 100%;
+		min-height: 100vh;
+		padding: 1rem 0.2rem;
+		margin: 0 auto;
+		background: url(/statics/img/pages/2017/shuangdan/yellowBg.png);
+		background-size: 100% auto;
+		.item {
+			overflow: hidden;
+			padding: 0.3rem 0.2rem;
+			margin: 0 0.1rem;
+			border-bottom: 1px dashed #911827;
+			font-size: 0.28rem;
+			color: #911827;
+			span:nth-child(1) {
+				float: left;
+			}
+			span:nth-child(2) {
+				float: right;
+			}
+		}
+	}
+	img {
+		display: block;
+		width: 2.4rem;
+		margin: 2.0rem auto;
+	}
+}
+
+.top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0.7rem;
+	background: url(/statics/img/pages/2017/shuangdan/prizeTop.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+}
+
+.bottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.7rem;
+	background: url(/statics/img/pages/2017/shuangdan/prizeBottom.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+}

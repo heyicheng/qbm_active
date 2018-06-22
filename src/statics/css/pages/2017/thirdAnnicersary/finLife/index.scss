@@ -1,0 +1,123 @@
+@import "../../../../common/reset.scss";
+body{
+	background: #ddd;
+	font-size: 14px;
+	margin: 0;
+}
+
+.container {
+	position: relative;
+	max-width: 7.5rem;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(top left,#5133a5, #000327);
+	background: -webkit-linear-gradient(top left, #5133a5, #000327);
+	.top {
+		width: 100%;
+		height: 7.73rem;
+		background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/top.png) 100% no-repeat;
+		background-position: top;
+		background-size: 100% 100%;
+	}
+	.bottom {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 9.24rem;
+		background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/bottom.png) 100% no-repeat;
+		background-size: 100% 100%;
+	}
+	.rulesBtn {
+		position: absolute;
+		right: 0;
+		top: 7.5rem;
+		z-index: 99;
+		width: 0.96rem;
+		height: 0.86rem;
+		background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/rulesBtn.png) 100% no-repeat;
+		background-size: 100% 100%;
+	}
+	.goGrabTicket {
+		position: absolute;
+		left: 0.2rem;
+		bottom: 3.5rem;
+		z-index: 90;
+		width: 4.0rem;
+		height: 4.4rem;
+		background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/goGrabTicket.png) 100% no-repeat;
+		background-size: 100% 100%;
+		._btn {
+			position: absolute;
+			top: 1.7rem;
+			left: 1.5rem;
+			width: 2.0rem;
+			height: 1.3rem;
+		}
+	}
+	.goShopping {
+		position: absolute;
+		right: 0.2rem;
+		bottom: 3.14rem;
+		z-index: 90;
+		width: 3.92rem;
+		height: 6rem;
+		background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/goShopping.png) 100% no-repeat;
+		background-size: 100% 100%;
+		._btn {
+			position: absolute;
+			top: 1.74rem;
+			left: 0.54rem;
+			width: 2.0rem;
+			height: 1.3rem;
+		}
+	}
+	.goMain {
+		position: absolute;
+		left: 0.15rem;
+		bottom: 2rem;
+		z-index: 90;
+		width: 7.06rem;
+		height: 1.74rem;
+		background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/goMain.png) 100% no-repeat;
+		background-size: 100% 100%;
+		._btn {
+			position: absolute;
+			top: 0.6rem;
+			left: 1.6rem;
+			width: 3.7rem;
+			height: 1.0rem;
+		}
+	}
+}
+
+
+.rulesContent{
+	width: 100%;
+	min-height: 100vh;
+	padding: 0 0.3rem;
+	font-size: 0.24rem;
+	background: linear-gradient(top left,#5133a5, #000327);
+	background: -webkit-linear-gradient(top left, #5133a5, #000327);
+	title {
+		display: inline-block;
+		width: 6.9rem;
+		font-size: 0.36rem;
+		text-align: center;
+		color: #ddd5ff;
+		margin: 0.6rem 0 0.2rem 0;
+		background: url(/statics/img/pages/2017/thirdAnnicersary/finLife/rulesTitleBg.png);
+		background-repeat: no-repeat;
+		background-size: 4.05rem 0.33rem;
+		background-position: center bottom;
+	}
+	p {
+		width: 6.9rem;
+		margin: 0;
+		line-height: 0.44rem;
+		color: #b2a0ff;
+		&:last-child {
+			padding-bottom: 0.3rem;
+		}
+	}
+}

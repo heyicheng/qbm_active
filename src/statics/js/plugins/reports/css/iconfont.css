@@ -1,0 +1,51 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1494300951943'); /* IE9*/
+  src: url('iconfont.eot?t=1494300951943#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1494300951943') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1494300951943') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1494300951943#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dr-female:before { content: "\e685"; }
+
+.icon-dr-active:before { content: "\e686"; }
+
+.icon-dr-count:before { content: "\e687"; }
+
+.icon-dr-a-turnover:before { content: "\e688"; }
+
+.icon-dr-gift:before { content: "\e689"; }
+
+.icon-dr-male:before { content: "\e68a"; }
+
+.icon-dr-service:before { content: "\e68b"; }
+
+.icon-dr-gold:before { content: "\e68c"; }
+
+.icon-dr-tel:before { content: "\e68d"; }
+
+.icon-dr-profit:before { content: "\e68e"; }
+
+.icon-dr-popularity:before { content: "\e68f"; }
+
+.icon-dr-time:before { content: "\e690"; }
+
+.icon-dr-user:before { content: "\e691"; }
+
+.icon-dr-down:before { content: "\e692"; }
+
+.icon-dr-medal-:before { content: "\e693"; }
+
+.icon-dr-medal-1:before { content: "\e694"; }
+
+.icon-dr-medal-2:before { content: "\e695"; }
+

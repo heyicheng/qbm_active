@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" href="/statics/css/common/reset.css">
+	<link rel="stylesheet" href="/statics/css/pages/2018/worldCup/index.css">
+	<script src="/statics/js/plugins/adaptive.min.js"></script>
+	<script src="/statics/js/common/common.js"></script>
+	<title>投标拿大奖，竞猜赢好礼</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="pos-rel not-attend hide" id="noAttend">
+      <span class="pos-abs rule-btn"></span>
+      <span class="pos-abs text-center join-btn" id="joinBtn">参与活动</span>
+      <div class="pos-abs text-center join-success hide" id="joinSuccess">
+        <h3 class="title">您成功参与活动！</h3>
+        <p>首次分享朋友圈即得5枚竞猜币，并且每次投标都<br />可获得竞猜币哦！</p>
+        <p class="time">2秒后自动进入活动页</p>
+      </div>
+    </div>
+
+    <div class="pos-rel attend hide" id="attend">
+      <span class="pos-abs rule-btn"></span>
+      <div class="pos-rel guessing">
+        <span class="pos-abs title"></span>
+        <span class="pos-abs text-center record" id="goRecord"><em>竞猜记录</em></span>
+        <div class="bd">
+          <div class="pos-rel text-center count">
+            <span class="pos-rel">我的竞猜币<em id="beansCount">0</em>枚<i class="pos-abs line"></i></span>
+            <span>当前可竞猜场次<em class="guessingNumber">0</em>场</span>
+          </div>
+          <div id="gameList">
+            <script id="gameListTpl" type="text/html">
+              {{each dataList}}
+              <div class="pos-rel item">
+                <div class="pos-abs item-title">
+                  <span class="date">{{$value.gameDate}}</span>
+                  <span class="txt"><em class="guessingNumber">0</em>场比赛可竞猜</span>
+                </div>
+                <div class="text-center countrys clearfix">
+                  <div class="fn-fl countrys-item">
+                    <h2>{{$value.teamBlue}}</h2>
+                    <img src="/statics/img/pages/2018/worldCup/country/{{$value.teamBlue}}.png" />
+                  </div>
+                  <div class="fn-fr countrys-item">
+                    <h2>{{$value.teamRed}}</h2>
+                    <img src="/statics/img/pages/2018/worldCup/country/{{$value.teamRed}}.png" />
+                  </div>
+                </div>
+                <div class="text-center btns clearfix">
+                  {{guessingBtnsFun $value.id $value.isGuess $value.guessTeam $value.teamBlue $value.teamRed $value.winningDate}}
+                </div>
+              </div>
+              {{/each}}
+            </script>
+          </div>
+
+        </div>
+      </div>
+      <div class="pos-rel guessing-rankings">
+        <span class="pos-abs title"></span>
+        <span class="pos-abs text-center more" id="goMoreRankings"><em>查看更多</em></span>
+        <ul class="bd" id="rankingsList">
+					<script id="rankingsListTpl" type="text/html">
+					<li class="head">
+						<span class="fn-fl no">排名</span>
+						<span class="fn-fl text-center name">钱粉</span>
+						<span class="fn-fl text-center phone">手机号</span>
+						<span class="fn-fr coin">竞猜币</span>
+					</li>
+					{{each dataList}}
+          <li class="{{lineFun $index}}">
+            <span class="fn-fl no {{iconFun $index}}">&nbsp;</span>
+            <span class="fn-fl text-center name">{{showNameFun $value.name $index}}</span>
+            <span class="fn-fl text-center phone">{{$value.phone}}</span>
+            <span class="fn-fr coin">{{$value.beansCount}}</span>
+          </li>
+          {{/each}}
+					</script>
+        </ul>
+      </div>
+      <div class="pos-rel borrow-list" id="goBorrowList">
+        <span class="pos-abs title"></span>
+        <div class="bd" id="borrowList">
+					<script id="borrow-list-template" type="text/html">
+					{{each dataList}}
+          <div class="item borrowDetail" data-financingId="{{$value.id}}" data-isDetailNew="{{$value.is_new_detail}}">
+						<h1><span class="big1 fn-fl">{{$value.name}}</span><span class="big2 fn-fl">{{startB $value.valid_date}}</span></h1>
+	          <p class="rate">
+	            <span class="big1 fn-fl">{{$value.basic_apr}}<span class="small">%+{{$value.reward_apr}}%</span></span>
+	            <span class="big2 fn-fl">{{timeLimitFun1 $value.status $value.isday $value.timeLimitDay $value.timeLimit}}</span>
+	          </p>
+	          <p class="intro">
+	            <span class="year">预期年化</span>
+	            <span class="time">出借期限</span>
+	          </p>
+	          <p class="process pos-rel">
+	            <span class="pro-start pos-abs {{imgFun $value.scales}}"></span>
+	            <span class="pro-line pos-abs"><span class="bg-span " style="width:{{scaleWidth $value.scales}}%"></span></span>
+	            <span class="pro-end pos-abs"></span>
+	            <span class="process-num pos-abs">{{scaleWidth $value.scales}}%</span>
+	          </p>
+					</div>
+					{{/each}}
+					</script>
+        </div>
+      </div>
+      <div class="prize-exchange">
+        <img src="/statics/img/pages/2018/worldCup/prize-exchange.png" class="imgBlock" />
+      </div>
+    </div>
+
+		<div class="pos-rel exchange-wrap hide" id="exchangeWrap">
+			<div class="pos-rel exchange-box">
+				<span class="pos-abs title"></span>
+				<div class="bd">
+					<div class="text-center count">我的竞猜币<em id="myCount">0</em>枚</div>
+					<div class="top-level">
+						<div class="text-center pic">
+							<img src="/statics/img/pages/2018/worldCup/level1.png"/>
+						</div>
+						<div class="text">
+							<span class="name">iPhone8</span>
+							<span class="text-right status">已领完</span>
+						</div>
+						<button class="receive-btn dis" data-level="1">第一名获得</button>
+					</div>
+
+					<div class="prize-list" id="prizeList">
+						<script id="prizeListTpl" type="text/html">
+						{{each dataList}}
+						<div class="item">
+							<div class="text-center pic">
+								<img src="/statics/img/pages/2018/worldCup/level{{$value.level}}.png"/>
+							</div>
+							<div class="text">
+								<span class="name">{{$value.name}}</span>
+								<span class="text-right status">剩余{{if $value.times < 0}}9999+{{else}}{{$value.times}}{{/if}}份</span>
+							</div>
+							<button class="receive-btn {{if $value.times == 0}}dis{{/if}}" data-level="{{$value.level}}" data-text="{{$value.name}}" data-price="{{$value.exchangePrice}}">{{$value.exchangePrice}}币兑换</button>
+						</div>
+						{{/each}}
+						</script>
+					</div>
+				</div>
+			</div>
+
+			<div class="pos-rel exchange-rankings">
+        <span class="pos-abs title"></span>
+        <span class="pos-abs text-center more" id="goExchangeMoreRankings"><em>查看更多</em></span>
+        <ul class="bd" id="exchangeRankingsList">
+					<script id="exchangeRankingsListTpl" type="text/html">
+					<li class="head">
+						<span class="fn-fl no">排名</span>
+						<span class="fn-fl text-center name">钱粉</span>
+						<span class="fn-fl text-center phone">手机号</span>
+						<span class="fn-fr coin">竞猜币</span>
+					</li>
+					{{each dataList}}
+          <li class="{{lineFun $index}}">
+            <span class="fn-fl no {{iconFun $index}}">&nbsp;</span>
+            <span class="fn-fl text-center name">{{showNameFun $value.name $index}}</span>
+            <span class="fn-fl text-center phone">{{$value.phone}}</span>
+            <span class="fn-fr coin">{{$value.beansCount}}</span>
+          </li>
+          {{/each}}
+					</script>
+        </ul>
+      </div>
+
+			<div class="pos-rel exchange-record">
+				<span class="pos-abs title"></span>
+				<span class="pos-abs text-center more" id="goExchangeRecord"><em>查看更多</em></span>
+				<ul class="bd" id="exchangeRecordList">
+					<script id="exchangeRecordListTpl" type="text/html">
+					<li class="head">
+						<span class="fn-fl time">时间</span>
+						<span class="fn-fl prize">兑换奖品</span>
+						<span class="fn-fr coin">竞猜币</span>
+					</li>
+					{{each dataList}}
+					<li>
+						<span class="fn-fl time">{{$value.addtime}}</span>
+						<span class="fn-fl prize">{{$value.detail}}</span>
+						<span class="fn-fr coin">-{{$value.exchangePrice}}枚</span>
+					</li>
+					{{/each}}
+					</script>
+				</ul>
+			</div>
+			<div class="pos-rel exchange-coin-record">
+				<span class="pos-abs title"></span>
+				<span class="pos-abs text-center more" id="goExchangeCoinRecord"><em>查看更多</em></span>
+				<ul class="bd" id="exchangeCoinRecordList">
+					<script id="exchangeCoinRecordListTpl" type="text/html">
+					<li class="head">
+						<span class="fn-fl time">时间</span>
+						<span class="fn-fl content">内容</span>
+						<span class="fn-fr coin">竞猜币</span>
+					</li>
+					{{each dataList}}
+					<li>
+						<span class="fn-fl time">{{dateFormatFun $value.addtime 1}}</span>
+						<span class="fn-fl content">
+
+							{{if $value.account}}
+								出借【{{$value.name}}】<br/>{{$value.account}}元
+							{{else}}
+								{{if $value.result == 1}}中奖{{/if}}
+								{{if $value.result == 0}}竞猜{{/if}}【{{$value.name}}】<br/>押【{{$value.winTeam}}{{if $value.winTeam != "平"}}胜{{/if}}】
+							{{/if}}
+							
+						</span>
+						<span class="fn-fr coin">
+							{{if $value.account}}
+								+{{$value.points}}枚
+							{{else}}
+								{{if $value.result == 2}}-5枚{{/if}}
+								{{if $value.result == 1}}+10枚{{/if}}
+							{{/if}}
+
+						</span>
+					</li>
+					{{/each}}
+					</script>
+				</ul>
+			</div>
+			<div class="pos-rel exchange-rule">
+				<span class="pos-abs title"></span>
+				<div class="bd">
+					<p>1.兑换时间：2018年6月21日00:00:00 - 2018年6月22日23:59:59，所有竞猜币请在兑换时间内兑换，过期失效，请及时进行兑换；</p>
+					<p>2. 在兑换活动中，部分奖品限量兑换，兑完即止，所有实物奖品和优酷会员奖励每个账号仅可兑换一次，红包奖励不限兑换次数；</p>
+					<p>3. 竞猜截止6月20日23:59:59时，竞猜榜单第一名将获得iPhone 8大奖，同时所获得的竞猜币会被清零；</p>
+					<p>4. 兑换优酷会员的用户，系统会默认以注册钱保姆的手机号作为会员特权领取账号，如需更改领取账号，请在兑换成功后及时联系客服（400-006-7066）进行更换；</p>
+					<p>5. 兑换实物奖品的钱粉请及时填写收货地址，收货地址请在“APP-我的-奖品区-我的收货地址”编辑，若活动结束时未填写地址且3个工作日内无法取得联系则视为放弃活动奖品，所有奖品会在活动结束后15个工作日内陆续完成发放；</p>
+					<p>6. 本活动所有奖品由钱保姆提供，与设备生产商Apple Inc.无关；</p>
+				</div>
+			</div>
+		</div>
+
+    <div class="pos-rel rule-wrap hide" id="ruleWrap">
+      <span class="pos-abs title"></span>
+      <ul class="bd">
+        <li>1.如何获得竞猜币：每次投标都可获得竞猜币，首次分享活动至朋友圈可获得5枚竞猜币，每场竞猜正确可获得10枚竞猜币；</li>
+        <li>2.在每场比赛竞猜结束前，使用竞猜币参与比赛结果竞猜，每场比赛只可竞猜一次，每次竞猜会消耗5枚竞猜币；</li>
+        <li>3.所有场次竞猜结算都会在次个工作日12:00前进行，15、16、17、18日的比赛场次竞猜结算会在19号12:00前完成；</li>
+        <li>4.截止6月20日23:59:59时，竞猜榜单第一名将获得iPhone 8大奖，同时所获竞猜币清零。在所有场次竞猜结束后，参与全部场次竞猜且都正确的用户即可获得2018世界杯吉祥物一个；</li>
+        <li>5.6月21日开启奖品兑换，兑换奖品会消耗相应枚数竞猜币，所有竞猜币请于2018年6月22日23:59:59点前兑换完毕，过期失效，请及时进行兑换；</li>
+        <li>6.兑换实物奖品的钱粉请及时填写收货地址，所有奖品会在活动结束后15个工作日内完成发放，若活动结束时未填写地址且3个工作日内无法取得联系则视为放弃活动奖品；兑换优酷会员默认以注册时填写手机号开通帐号，如需更改，请在活动结束3个工作日内联系客服：400-006-7066；</li>
+        <li>7.周一放肆送、惊喜加息，假日宝，新手标等活动项目不参与本次活动；</li>
+        <li>8.本活动所有奖品由钱保姆提供，与设备生产商Apple Inc.无关；</li>
+      </ul>
+    </div>
+    <div class="text-center copyRight hide">*钱保姆保留对本次活动在法律允许范围内的解释权</div>
+
+    <div class="pos-fixed side-icons">
+      <span class="pos-abs calculator-icon hide"></span>
+      <span class="pos-abs share-icon hide"></span>
+    </div>
+  </div>
+	<script src="/statics/js/plugins/sea.js"></script>
+	<script src="/statics/js/plugins/seajs-css.js"></script>
+	<script src="/statics/js/common/sea-config.js"></script>
+	<script>
+		seajs.use("/statics/js/pages/2018/worldCup/index.js");
+	</script>
+</body>
+
+</html>
